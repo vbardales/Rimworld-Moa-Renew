@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="EggFertBase">
+		<defName>EggMoaFertilized</defName>
+		<label>moa egg (fert.)</label>
+		<description>A fertilized moa egg. If all goes well, it should hatch into a baby moa. It can be eaten raw, but it's much better cooked.</description>
+		<graphicData>
+		  <color>(107,113,139)</color>
+		  <drawSize>1.2</drawSize>
+		</graphicData>
+		<statBases>
+		  <MarketValue>26.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>7</hatcherDaystoHatch>
+				<hatcherPawn>Moa</hatcherPawn>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

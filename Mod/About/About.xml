@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Moa 1.6</name>
+  <author>Poshspider, dninemfive, textures Serpyderpy - 1.6 port: nelim</author>
+  <packageId>nelim.moa</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <url>https://github.com/vbardales/Rimworld-Moa-Renew</url>
+  <description>The moa from Halo Reach, brought forward to RimWorld 1.6. A large flightless bird, long domesticated, that also lives wild.
+
+I am not the author of this mod. The bird is Poshspider's, the update through 1.3 is dninemfive's, and the textures are Serpyderpy's - all I did was the work needed to make it run on 1.6. Credit goes to them; mistakes in the update are mine. If any of them comes back to it, or asks me to take this down, I will.
+
+Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=1746450702
+
+What it adds
+
+- The moa: a herd bird, tamer than an emu and slower, kept for its meat and its eggs. It eats rough vegetation, lives fourteen years, and lays every two days - one to three eggs at a time, where an emu manages one every three and a third.
+- Moa eggs, fertilized and unfertilized.
+- Found in temperate forest and swamp, in rainforest, and rather more often in arid shrubland.
+- It fights poorly on purpose: weaker claws and beak than an emu, but a heavier stun on a surprise attack.
+
+What changed in the 1.6 update
+
+- Wildness stopped being a race property. In 1.6 it is a Wildness StatDef declared under statBases, and the old form was simply ignored: the moa tamed as easily as a rat instead of sitting at 0.45.
+- The unfertilized egg was missing. In 1.6 CompEggLayer really does build eggUnfertilizedDef as soon as an animal lays without having been fertilized, and throws if the field is null - an in-game crash, not a config warning, on a bird that lays every two days. The def was written, taking the market value and colour of its fertilized counterpart.
+- The mod shipped two copies of the moa, an older one under Common/ and the current one under 1.3/. Since 1.5, RimWorld loads both a Common folder and the highest version folder it can find, so on 1.6 the pair would have collided over the same defName. Only the 1.3 version is kept.
+
+No balance value was changed.
+
+Content mod: removing it mid-game will lose any moa and any moa eggs already in play.
+
+Source, changelog and the full list of what the port changed: https://github.com/vbardales/Rimworld-Moa-Renew
+
+Licensed MIT, like the original. The update work was done with the help of an AI assistant (Claude, by Anthropic). Thanks to Poshspider for the bird, to dninemfive for keeping it alive to 1.3, and to Serpyderpy for the art.
+
+If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.</description>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>Ludeon.RimWorld.Anomaly</li>
+    <li>Ludeon.RimWorld.Odyssey</li>
+  </loadAfter>
+</ModMetaData>

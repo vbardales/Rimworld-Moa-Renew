@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="BigBirdThingBase">
+    <defName>Moa</defName>
+    <label>moa</label>
+    <description>A large flightless bird native to the planet of Reach, known for its tasty meat. It has been long domesticated, but also lives in the wild.</description>
+    <statBases>
+      <Wildness>0.45</Wildness>						<!-- emu: 0.95 -->
+      <MoveSpeed>4.2</MoveSpeed>					<!-- emu: 5.5 -->
+      <MarketValue>250</MarketValue>				<!-- emu: 200 -->
+      <ComfyTemperatureMin>-8</ComfyTemperatureMin>
+      <ComfyTemperatureMax>50</ComfyTemperatureMax>
+      <FilthRate>8</FilthRate>
+    </statBases>
+    <race>
+      <herdAnimal>true</herdAnimal>					<!-- emu: false -->
+      <baseBodySize>0.6</baseBodySize>
+	  <baseHealthScale>0.8</baseHealthScale>		<!-- emu: 0.9 -->
+	  <baseHungerRate>0.3</baseHungerRate>			<!-- emu: 0.28 -->
+	  <foodType>VegetarianRoughAnimal</foodType>
+      <lifeExpectancy>14</lifeExpectancy>			<!-- emu: 45 -->
+	  <meatLabel>moa meat</meatLabel>				<!-- emu: uses cassowary "bird meat" -->
+	  <wildBiomes>
+		<TemperateForest>0.2</TemperateForest> 		<!-- as common as megatheria -->
+		<TemperateSwamp>0.2</TemperateSwamp>
+		<TropicalRainforest>0.25</TropicalRainforest> <!-- 1/2 as common as cassowaries -->
+		<AridShrubland>0.35</AridShrubland> <!-- half as common as emus -->
+	  </wildBiomes>
+	  <lifeStageAges>
+        <li>
+          <def>AnimalBabyTiny</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Chick_Call</soundWounded>
+          <soundDeath>Pawn_Chick_Call</soundDeath>
+          <soundCall>Pawn_Chick_Call</soundCall>
+          <soundAngry>Pawn_Chick_Call</soundAngry>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.1</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.2222</minAge>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggFertilizedDef>EggMoaFertilized</eggFertilizedDef>
+        <eggUnfertilizedDef>EggMoaUnfertilized</eggUnfertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>2</eggLayIntervalDays>					<!-- emu: 3.33 -->
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>												<!-- emu: 1 -->
+          <min>1</min>
+          <max>3</max>
+        </eggCountRange>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>claws</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>6</power>									<!-- emu: 8 -->
+        <cooldownTime>1.65</cooldownTime>					<!-- emu: 1.5 -->
+        <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>							<!-- emu: 14 -->
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+		<label>beak</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>5</power>									<!-- emu: 9 -->
+        <cooldownTime>1.85</cooldownTime>					<!-- emu: 2 -->
+        <linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>8</amount>							<!-- emu: 14 -->
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4</power>											<!-- emu: 6 -->
+        <cooldownTime>1.65</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+	<tradeTags>
+      <li>AnimalExotic</li>
+      <li>AnimalFarm</li>
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BigBirdKindBase">
+    <defName>Moa</defName>
+    <label>moa</label>
+    <race>Moa</race>
+	<lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Moa_Serpy/moa</texPath>
+          <drawSize>1.4</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Emu/Dessicated_Emu</texPath>
+          <drawSize>1.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Moa_Serpy/moa</texPath>
+          <drawSize>1.7</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Emu/Dessicated_Emu</texPath>
+          <drawSize>1.7</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Moa_Serpy/moa</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Emu/Dessicated_Emu</texPath>
+          <drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>
