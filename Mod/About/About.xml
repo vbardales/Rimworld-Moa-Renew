@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Moa 1.6</name>
+  <name>Moa Renew</name>
   <author>Poshspider, dninemfive, textures Serpyderpy - 1.6 port: nelim</author>
   <packageId>nelim.moa</packageId>
   <supportedVersions>
@@ -34,7 +34,11 @@ Source, changelog and the full list of what the port changed: https://github.com
 
 Licensed MIT, like the original. The update work was done with the help of an AI assistant (Claude, by Anthropic). Thanks to Poshspider for the bird, to dninemfive for keeping it alive to 1.3, and to Serpyderpy for the art.
 
-If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.</description>
+If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
+
+Preview artwork generated with OpenAI image generation.
+
+[url=https://github.com/vbardales/Rimworld-Moa-Renew]Source code on GitHub[/url]</description>
   <loadAfter>
     <li>Ludeon.RimWorld</li>
     <li>Ludeon.RimWorld.Royalty</li>
@@ -44,3 +48,4 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
     <li>Ludeon.RimWorld.Odyssey</li>
   </loadAfter>
 </ModMetaData>
+

@@ -2,29 +2,27 @@
 localization: complete
 translation_en: complete
 translation_fr: partial
-mod:          Moa 1.6
+mod:          Moa Renew
 packageId:    nelim.moa
 repo:         Rimworld-Moa-Renew
 visibility:   public
 detached:     yes
-stage:        ModIcon générée
+stage:        options
 licence:      open
 licence_at:   upstream LICENSE, MIT, copyright dninemfive 2021
 dependencies: none
-showcase:     ModIcon generated
+showcase:     icon and preview generated
 settings_audit: not_applicable
 tested_on:
 workshop:
 remaining:
-  - defect: Mod/About/Preview.png is absent
   - defect: French resources are absent for the 11 owned text fields
-  - defect: About description lacks the required final Source code on GitHub link
   - unverified: functional scenarios and in-game EN/FR validation remain pending
 session:      maj:        2026-09-12, releve automatique
 updated:      2026-09-13, direct workflow audit
 ---
 
-# Moa 1.6 — status
+# Moa Renew — status
 
 Read by a sweep across every mod, rather than by asking each thread in turn. It lives at the
 root, never inside `Mod/`, so Steam never receives it.
@@ -219,3 +217,48 @@ results remain unchanged because no gameplay XML or text changed.
 Next transition: Preview générée, requiring Mod/About/Preview.png; that file is still absent.
 The user's artwork source under output/ is retained locally and is not duplicated in Git;
 Art/ModIcon-source.png is the committed source archive. No RimWorld launch was performed.
+
+## Preview delivered — 2026-09-13
+
+Stage: **ModIcon générée → Preview générée**. User requested continuation after completion
+of the icon; this authorizes producing the next asset and supersedes the earlier pending scope
+clarification. Built-in image generation produced the illustration using the actual moa sprite
+as a subject reference. Exact prompt: Art/preview-generation.txt. Unmodified generated source:
+Art/Preview.png. Delivered composition: Mod/About/Preview.png, PNG 896 x 504, 512,930 bytes.
+
+Direct inspection of source, final composition and Art/Preview-check-268.png passed: overhead
+oblique view, ground filling the frame, clear bird silhouettes, quiet title space and no clipping.
+No concrete camera defect was found. Tiny animal face marks are part of the sprite reference;
+there are no detailed colonist portraits. At thumbnail size the title/version and bird group remain
+identifiable; the short summary is intended for full-size viewing.
+
+Palette source of truth: Art/preview-palette.json. Slate ground and blue birds anchor the veil
+and secondary ink. Pink crests supply the distinct vivid accent used by the line and version badge.
+Art/render-preview.cjs generates Art/preview.html from that palette and captures it in headless
+Chrome after document.fonts.ready. Segoe UI was available. Title 46px, Renew suffix at 65 percent,
+summary 21px, badge 26px. No unofficial/prohibited tag is warranted by the recorded open licence.
+Art/validate-preview.py measures every background pixel inside the text rectangles, using
+Art/Preview-background-check.png; Art/preview-validation.json records minimum contrast ratios:
+main title 7.679, suffix 6.853, summary 7.884, badge 6.996. All exceed 4.5:1.
+
+Display title aligned to Moa Renew in About.xml, README and current STATUS fields; packageId
+nelim.moa is unchanged. Added the required final GitHub source link and generation disclosure
+to the English description. XML field check: all four files pass; About parses and the final
+link matches the existing repository URL. Historic naming references above remain audit history.
+
+## Preview composition and description gate — 2026-09-13
+
+Stage: **Preview générée → preOptions**. Distinct secondary/accent colors, title hierarchy,
+English description and final source-link markup passed the direct checks recorded above.
+The preview uses the current Moa Renew display name; Renew is a secondary-colored suffix.
+No linking word treatment is required for this title.
+
+
+## Settings gate carried forward — 2026-09-13
+
+Stage: **preOptions → options**. The justified settings_audit: not_applicable finding from
+the direct audit remains valid: only artwork, About metadata and documentation changed.
+No settings source, gameplay Def or integration changed. No empty page or shortcut exists.
+Next gate is l10n: the previously inventoried 11 fields still lack French resources.
+No game run or full functional validation is claimed.
+
