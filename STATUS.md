@@ -7,16 +7,16 @@ packageId:    nelim.moa
 repo:         Rimworld-Moa-Renew
 visibility:   public
 detached:     yes
-stage:        horsMonoRepo
+stage:        ModIcon générée
 licence:      open
 licence_at:   upstream LICENSE, MIT, copyright dninemfive 2021
 dependencies: none
-showcase:     none
+showcase:     ModIcon generated
 settings_audit: not_applicable
 tested_on:
 workshop:
 remaining:
-  - defect: Mod/About/ModIcon.png and Preview.png are absent
+  - defect: Mod/About/Preview.png is absent
   - defect: French resources are absent for the 11 owned text fields
   - defect: About description lacks the required final Source code on GitHub link
   - unverified: functional scenarios and in-game EN/FR validation remain pending
@@ -185,3 +185,37 @@ only STATUS.md introduced content changes. Working tree was clean after the push
 This supersedes the earlier pending commit/push notes. Stage remains horsMonoRepo.
 The original audit-only restriction on generating images awaits clarification before asset work.
 
+
+## User-supplied ModIcon inspection — 2026-09-13
+
+Directly opened and inspected Mod/About/ModIcon.png. PNG decoder confirms 1254 x 1254,
+1,204,765 bytes. The image shows a single orange cartoon moa, a wink, heavy dark outlines,
+a near-black background and one sparkle. Subject and contrast are clear at source resolution.
+The user supplied this artwork; no generation was performed by this audit.
+An additional source candidate is present at output/imagegen/moa-emoji-orange.png.
+
+The missing-icon finding is superseded. Delivery dimensions still fail the expected 128 x 128;
+a reduced delivery copy and direct 32 px readability check remain necessary. The <1 MB hard
+limit applies to Preview, not to ModIcon; icon size is reported as optimization evidence.
+Stage remains horsMonoRepo; no visual failure of camera is alleged and no artwork is overwritten.
+
+## ModIcon delivery completed — 2026-09-13
+
+User authorized continuing with the proposed size reduction. Archived the original unchanged as
+Art/ModIcon-source.png; it matches output/imagegen/moa-emoji-orange.png by SHA256.
+Resampled with high-quality bicubic interpolation to Mod/About/ModIcon.png, PNG 128 x 128,
+19,885 bytes. Art/ModIcon-check-32.png records the 32 x 32 readability check.
+Direct visual inspection of both versions passed: the orange bird silhouette, neck and beak
+remain distinguishable; no cropping or unwanted border was introduced. Fine facial details
+are naturally reduced at 32 px. No image was regenerated.
+
+Stage: **horsMonoRepo → ModIcon générée**. The fixed XML content implementation is present;
+there is no compiled component or build artifact requirement. Check-XmlFields.ps1 passed on
+all 4 XML files, and Check-DefRefs.ps1 passed against Core alone in the new checkout.
+These checks do not certify in-game behavior, which remains pending at the final test gate.
+The earlier missing/oversized icon findings are superseded. Settings and translation audit
+results remain unchanged because no gameplay XML or text changed.
+
+Next transition: Preview générée, requiring Mod/About/Preview.png; that file is still absent.
+The user's artwork source under output/ is retained locally and is not duplicated in Git;
+Art/ModIcon-source.png is the committed source archive. No RimWorld launch was performed.
