@@ -16,7 +16,6 @@ settings_audit: not_applicable
 tested_on:
 workshop:
 remaining:
-  - unverified: imported local audit changes have not been committed or pushed
   - defect: Mod/About/ModIcon.png and Preview.png are absent
   - defect: French resources are absent for the 11 owned text fields
   - defect: About description lacks the required final Source code on GitHub link
@@ -177,3 +176,12 @@ Imported local changes have not been committed or pushed.
 
 The existing RimWorld Mods/Moa junction was verified and retargeted to MoaRenew/Mod;
 its old target was preserved. No game was launched.
+
+## Import published to GitHub — 2026-09-13
+
+User authorized commit and push. Import audit committed as 6353ab1 and pushed to origin/main.
+Git normalization confirmed that the apparent payload modifications were line-ending differences;
+only STATUS.md introduced content changes. Working tree was clean after the push.
+This supersedes the earlier pending commit/push notes. Stage remains horsMonoRepo.
+The original audit-only restriction on generating images awaits clarification before asset work.
+
