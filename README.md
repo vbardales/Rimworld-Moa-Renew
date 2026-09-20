@@ -62,5 +62,5 @@ any other of my mods, including publishing a continuation of it. All credit must
 - **Poshspider** — the original mod.
 - **dninemfive** — the update through 1.3, and the MIT terms this port relies on.
 - **Serpyderpy** — the textures.
-- 1.6 update by nelim. Written with the help of Claude (Anthropic).
+- 1.6 update by Nelim. Written with the help of Claude (Anthropic).
 
