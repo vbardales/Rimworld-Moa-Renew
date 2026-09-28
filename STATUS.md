@@ -19,7 +19,8 @@ settings_audit: not_applicable
 tested_on:
 workshop:      3806762626 (private, prepublished 0.1.0 on 2026-09-23)
 remaining:
-  - feature: animal integrations (ADS2, Nocturnal Animals, Better Crossbreeding) decided and patched or justified, before preTest
+  - unverified: ADS 2 patch applied to real Core/ADS2 XML (lxml test, failing-predicate check) and in game
+  - feature: thanks to ADS 2, Nocturnal Animals (register, description, PUBLICATION.md)
   - feature: Pickle suite written and justified (none yet), then done
   - unverified: 11 French fields in game (test_content.py could not be rerun: no Python on this machine)
   - unverified: functional scenarios in game, no @wip, all conditional scenarios run, no manual test left
@@ -285,3 +286,18 @@ Replaces the "translation_fr: partial / defect: French absent" decision above (r
 - `.dds`, `.ico`, `desktop.ini`, `output/`, evidence folders are gitignored; no Pickle evidence exists.
 - Rules for `tested`: no `@wip`, every `@requires` scenario run, no manual test left.
 - Docs read and versions: `docs/PROTOCOLS-READ.md`.
+
+## Animal integrations — 2026-09-29
+
+Analogue vanilla animal: the emu (parent `BigBirdThingBase`). Nothing depends on these mods; `modDependencies` stays empty.
+- **A Dog Said... Animal Prosthetics 2** (3238353862): patch `Mod/Patches/AnimalProsthetics2.xml` adds `Moa` to `ADS_Cat1`
+  and `ADS_Cat2`, where its 1.6 `Animal_Categories.xml` lists the Emu (not Cat3). Guarded by `PatchOperationConditional`
+  on `ADS_Cat1`; `loadBefore` added to About.xml. Not applied to real XML yet (no Python/lxml here): **unverified**.
+- **[XND] Nocturnal Animals (Continued)** (2269731409): its 1.6 `Patches/Core` names only the Cassowary among birds; the
+  Emu is not named, so it is diurnal. Moa follows: no patch, by decision.
+- **Better Crossbreeding** (3520675842): vanilla emu has no `canCrossBreedWith` and the moa description names no partner.
+  No patch: a moa that cannot crossbreed is a decision, not an oversight. Reopen if Virginie wants a partner.
+- **Dogs Mate (Continued)** (2441132298, `Mlie.DogsMate`): since 1.6 it uses the vanilla crossbreeding system and only
+  cross-checks lists at game start. With no crossbreeding declared on the moa, there is nothing to patch.
+Thanks (`THANKS`, WORKSHOP_COMMENTS.md) to ADS 2 and Nocturnal Animals are not written yet: description and register pending.
+`remaining`: the animal-integration item is closed except the ADS 2 patch test and the thanks.

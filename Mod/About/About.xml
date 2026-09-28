@@ -47,5 +47,10 @@ Preview artwork generated with OpenAI image generation.
     <li>Ludeon.RimWorld.Anomaly</li>
     <li>Ludeon.RimWorld.Odyssey</li>
   </loadAfter>
+  <!-- ADS 2 copies its animal category lists in its own last patch: this mod must load first for
+       Patches/AnimalProsthetics2.xml to be read. Order, not a dependency. -->
+  <loadBefore>
+    <li>SamBucher.ADogSaidAnimalProsthetics2</li>
+  </loadBefore>
 </ModMetaData>
 

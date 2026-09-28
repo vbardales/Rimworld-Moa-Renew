@@ -13,6 +13,7 @@ textures by Serpyderpy.
 
 ### Added
 
+- Optional patch for A Dog Said... Animal Prosthetics 2: the moa joins the emu's surgery categories 1 and 2.
 - Support for RimWorld 1.6.
 - `EggMoaUnfertilized`. The mod declared only its fertilized egg, which 1.3 tolerated. In 1.6
   `CompEggLayer` builds `eggUnfertilizedDef` as soon as an animal lays without having been

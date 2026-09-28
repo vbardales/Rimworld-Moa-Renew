@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--
+    Native support for A Dog Said... Animal Prosthetics 2 (SamBucher.ADogSaidAnimalProsthetics2).
+
+    That mod places animals in three abstract recipes that only carry a recipeUsers list: ADS_Cat1 (basic
+    replacements), ADS_Cat2 (simple prosthetics) and ADS_Cat3 (bionics). The lists are cumulative.
+    Its 1.6 Animal_Categories.xml lists the Emu in ADS_Cat1 and ADS_Cat2, and not in ADS_Cat3, next to
+    the cassowary, ostrich and turkey. The moa is the emu's variant (same parent, same body plan), so it
+    goes where the emu is: categories 1 and 2.
+
+    The guard: the operation runs only when ADS_Cat1 exists, that is when the mod is loaded. A
+    PatchOperationConditional with no nomatch succeeds without doing anything otherwise. MayRequire
+    cannot be used on an operation: nothing reads it there.
+
+    The load order: ADS 2 copies these lists into its real recipes in its own last patch, so About.xml
+    declares loadBefore for it. Order, not a dependency.
+  -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/RecipeDef[@Name="ADS_Cat1"]</xpath>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[@Name="ADS_Cat1"]/recipeUsers</xpath>
+          <value>
+            <li>Moa</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[@Name="ADS_Cat2"]/recipeUsers</xpath>
+          <value>
+            <li>Moa</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>
