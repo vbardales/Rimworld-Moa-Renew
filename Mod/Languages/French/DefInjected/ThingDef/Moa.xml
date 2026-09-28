@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Moa.label>moa</Moa.label>
+  <Moa.description>Un grand oiseau incapable de voler, originaire de la planète Reach et réputé pour sa viande savoureuse. Domestiqué depuis longtemps, il vit également à l'état sauvage.</Moa.description>
+  <Moa.race.meatLabel>viande de moa</Moa.race.meatLabel>
+  <Moa.tools.claws.label>griffes</Moa.tools.claws.label>
+  <Moa.tools.beak.label>bec</Moa.tools.beak.label>
+  <Moa.tools.head.label>tête</Moa.tools.head.label>
+  <EggMoaFertilized.label>œuf de moa (fécondé)</EggMoaFertilized.label>
+  <EggMoaFertilized.description>Un œuf de moa fécondé. Si tout se passe bien, un petit moa devrait en sortir. Il peut être mangé cru, mais il est bien meilleur une fois cuit.</EggMoaFertilized.description>
+  <EggMoaUnfertilized.label>œuf de moa (non fécondé)</EggMoaUnfertilized.label>
+  <EggMoaUnfertilized.description>Un œuf de moa non fécondé. Il peut être mangé cru, mais il est bien meilleur une fois cuit.</EggMoaUnfertilized.description>
+</LanguageData>

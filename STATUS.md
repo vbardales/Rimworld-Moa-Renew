@@ -1,25 +1,31 @@
 ---
 localization: complete
 translation_en: complete
-translation_fr: partial
+translation_fr: complete
 mod:          Moa Renew
 packageId:    nelim.moa
 repo:         Rimworld-Moa-Renew
 visibility:   public
 detached:     yes
-stage:        options
+stage:        showcase
+workflow_stage: l10n
 licence:      open
 licence_at:   upstream LICENSE, MIT, copyright dninemfive 2021
+upstream_mod_remotes:
+  - https://github.com/dninemfive/rw-moa
 dependencies: none
 showcase:     icon and preview generated
 settings_audit: not_applicable
 tested_on:
-workshop:
+workshop:      3806762626 (private, prepublished 0.1.0 on 2026-09-23)
 remaining:
-  - defect: French resources are absent for the 11 owned text fields
-  - unverified: functional scenarios and in-game EN/FR validation remain pending
+  - feature: animal integrations (ADS2, Nocturnal Animals, Better Crossbreeding) decided and patched or justified, before preTest
+  - feature: Pickle suite written and justified (none yet), then done
+  - unverified: 11 French fields in game (test_content.py could not be rerun: no Python on this machine)
+  - unverified: functional scenarios in game, no @wip, all conditional scenarios run, no manual test left
+  - feature: PR to upstream dninemfive/rw-moa (needs Virginie agreement)
 session:      maj:        2026-09-12, releve automatique
-updated:      2026-09-13, direct workflow audit
+updated:      2026-09-29, audit and application
 ---
 
 # Moa Renew — status
@@ -262,3 +268,20 @@ No settings source, gameplay Def or integration changed. No empty page or shortc
 Next gate is l10n: the previously inventoried 11 fields still lack French resources.
 No game run or full functional validation is claimed.
 
+
+## Audit and application — 2026-09-29
+
+Old: `stage: options` (declared) with French absent. Retained: **l10n** (`stage: showcase`, `workflow_stage: l10n`).
+Replaces the "translation_fr: partial / defect: French absent" decision above (replaced 2026-09-29, kept).
+
+- French DefInjected now exists (`Mod/Languages/French/DefInjected/{ThingDef,PawnKindDef}/Moa.xml`, 11 fields, committed
+  this date). Coverage rechecked by reading against the 11-field inventory above; `Tests/test_content.py` not rerun
+  (Python unavailable), so results in `Tests/*.txt` (2026-09-13) predate the French files: unverified.
+- `l10n → preTest` fails: this mod adds an animal, so the three integrations (ADS2, Nocturnal Animals, Better
+  Crossbreeding) must be handled first (PUBLISHING.md, 2026-09-28); see BACKLOG.md. Dependencies: none, `loadAfter` only.
+- `preTest → done`: no Pickle suite, no justification written. Not done.
+- Prepublication 0.1.0: `About/PublishedFileId.txt` = 3806762626 (private item). CHANGELOG has `## [0.1.0]`; `1.0.0` stays unreleased.
+- Upstream git repo found: `dninemfive/rw-moa` (MIT, main, last push 2022-07). Wording of the port matches its 1.3 files; PR in BACKLOG.
+- `.dds`, `.ico`, `desktop.ini`, `output/`, evidence folders are gitignored; no Pickle evidence exists.
+- Rules for `tested`: no `@wip`, every `@requires` scenario run, no manual test left.
+- Docs read and versions: `docs/PROTOCOLS-READ.md`.

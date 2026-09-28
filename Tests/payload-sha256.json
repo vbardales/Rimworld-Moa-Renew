@@ -1,0 +1,14 @@
+{
+  "Mod/About/About.xml": "018f00eaf81186ba6c4276fb41dd25d87aebe0e6ddb71ed2093a193d3a4ad280",
+  "Mod/About/ModIcon.png": "3954ed5808925a0675b1febe0b9810636a301b0ca3a7ed499dbe1d6723ba0797",
+  "Mod/About/Preview.png": "1d9a806a05a564581f5f0197cd6cd71488500275d668698dc2222e814a86c122",
+  "Mod/Defs/Items_Eggs_Moa.xml": "926040786a59fba40668eae78be60d337ab1cf335efb8befd3bfeeeece2ab39d",
+  "Mod/Defs/Items_MoaEggUnfertilized.xml": "e834fc80c3407de54d151814678fb6c11b4d61c0e7976df98d5c8028f10a2f19",
+  "Mod/Defs/Races_Animal_Moa.xml": "6e8fef260f8d8fa24d956fdcd6bd16c714f5ea58633963d2f57e684dd2137964",
+  "Mod/Languages/French/DefInjected/PawnKindDef/Moa.xml": "a1544cd7f84ca3d1d5b992dec0f5fee170aff1ea50b15b8c0d84acbf6f3c38b3",
+  "Mod/Languages/French/DefInjected/ThingDef/Moa.xml": "bdf6aafba61b888d16fd6b3c89568b95d11b8a5cfc2ce48ba02fc059951c4ebd",
+  "Mod/LICENSE": "3ce048f84941f580ba7011479360e1668b93f559522e1a0086e9a7ca67813506",
+  "Mod/Textures/Things/Pawn/Animal/Moa_Serpy/moa_east.png": "4be76862b30a141e02a74ff4a40f78d7f56cccd334caa522bad2d5e5407b2f46",
+  "Mod/Textures/Things/Pawn/Animal/Moa_Serpy/moa_north.png": "55935f35b77c57e2a0d1755dd36c724023539cc8d058546a526b1f64af6c9c0d",
+  "Mod/Textures/Things/Pawn/Animal/Moa_Serpy/moa_south.png": "e6749ef293ce1aa1e320881041665df8e5ba2905b4c465489fa9b392c4b04272"
+}

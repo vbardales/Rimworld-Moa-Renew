@@ -1,0 +1,10 @@
+*.dds
+*.ico
+desktop.ini
+output/
+evidence/
+Tests/Pickle/Evidence/
+.build/
+.vs/
+.idea/
+*.user
