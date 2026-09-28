@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--
+    The moa and the emu can breed. The game decides who mates from the race of the male alone
+    (canCrossBreedWith, read by JobGiver_Mate), so each race lists the other: the moa lists the emu in its
+    own def, this file lists the moa on the emu. Nothing else of the emu changes. Vanilla, no dependency.
+
+    The emu may already carry a list (another mod), so the moa is appended to it; a bare Add on <race>
+    would write a second canCrossBreedWith and one would overwrite the other.
+  -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="Emu"]/race/canCrossBreedWith</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Emu"]/race/canCrossBreedWith</xpath>
+      <value>
+        <li>Moa</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Emu"]/race</xpath>
+      <value>
+        <canCrossBreedWith>
+          <li>Moa</li>
+        </canCrossBreedWith>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

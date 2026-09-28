@@ -301,3 +301,14 @@ Analogue vanilla animal: the emu (parent `BigBirdThingBase`). Nothing depends on
   cross-checks lists at game start. With no crossbreeding declared on the moa, there is nothing to patch.
 Thanks (`THANKS`, WORKSHOP_COMMENTS.md) to ADS 2 and Nocturnal Animals are not written yet: description and register pending.
 `remaining`: the animal-integration item is closed except the ADS 2 patch test and the thanks.
+
+## Moa × emu crossbreeding — 2026-09-29 (owner's decision)
+
+Replaces the "no crossbreeding" decisions above for Better Crossbreeding and Dogs Mate.
+- Vanilla: `Moa` lists `Emu` in `canCrossBreedWith` (`Defs/Races_Animal_Moa.xml`); `Patches/EmuCrossbreeding.xml` lists `Moa` on the
+  emu, appending to an existing list if any. This **modifies the vanilla emu** whenever the mod is loaded.
+- Better Crossbreeding: `Patches/BetterCrossbreeding.xml`, guarded by `PatchOperationFindMod`, young of the pair are `Random`
+  (either parent's kind) in both directions; namespace `DZY.CrossBreeding` confirmed in the DLL (`grep -a`), class `Extension` not.
+- Dogs Mate: no patch; it cross-checks the lists at start, and both sides are now declared.
+- **Unverified**: none of these patches applied to real XML or in game (no Python/lxml here); the BC `Extension` type name and `Random`
+  element shape are read from its example only. Thanks to Better Crossbreeding and Dogs Mate still to write.

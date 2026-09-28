@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--
+    Native support for Better Crossbreeding (DizzyEevee.BetterCrossbreeding). Optional, no dependency.
+
+    That mod decides what is born from the PawnKindDef of the MOTHER (DZY.Crossbreeding.Extension, outcomes
+    keyed by the father). Without it the child is the mother's kind. Here the young of a moa/emu pairing is
+    either parent's kind on a coin flip (Random), in both directions. Whether the pair can mate at all is
+    vanilla and lives in Defs/Races_Animal_Moa.xml and Patches/EmuCrossbreeding.xml.
+
+    The class is compiled DZY.CrossBreeding (capital B), the mod's own example writes DZY.Crossbreeding.
+    The guard is the mod's About name, exactly. The extension is created when the kind has none.
+  -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Better Crossbreeding</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/PawnKindDef[defName="Moa"]/modExtensions/li[@Class="DZY.CrossBreeding.Extension"]</xpath>
+          <nomatch Class="PatchOperationAddModExtension">
+            <xpath>Defs/PawnKindDef[defName="Moa"]</xpath>
+            <value>
+              <li Class="DZY.CrossBreeding.Extension">
+                <outcomes></outcomes>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/PawnKindDef[defName="Moa"]/modExtensions/li[@Class="DZY.CrossBreeding.Extension"]/outcomes</xpath>
+          <value>
+            <Emu><Random /></Emu>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/PawnKindDef[defName="Emu"]/modExtensions/li[@Class="DZY.CrossBreeding.Extension"]</xpath>
+          <nomatch Class="PatchOperationAddModExtension">
+            <xpath>Defs/PawnKindDef[defName="Emu"]</xpath>
+            <value>
+              <li Class="DZY.CrossBreeding.Extension">
+                <outcomes></outcomes>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/PawnKindDef[defName="Emu"]/modExtensions/li[@Class="DZY.CrossBreeding.Extension"]/outcomes</xpath>
+          <value>
+            <Moa><Random /></Moa>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

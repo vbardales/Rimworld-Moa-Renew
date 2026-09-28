@@ -19,6 +19,9 @@
 	  <baseHealthScale>0.8</baseHealthScale>		<!-- emu: 0.9 -->
 	  <baseHungerRate>0.3</baseHungerRate>			<!-- emu: 0.28 -->
 	  <foodType>VegetarianRoughAnimal</foodType>
+	  <canCrossBreedWith>
+		<li>Emu</li>
+	  </canCrossBreedWith>
       <lifeExpectancy>14</lifeExpectancy>			<!-- emu: 45 -->
 	  <meatLabel>moa meat</meatLabel>				<!-- emu: uses cassowary "bird meat" -->
 	  <wildBiomes>

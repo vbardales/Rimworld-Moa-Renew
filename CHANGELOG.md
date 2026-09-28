@@ -13,6 +13,7 @@ textures by Serpyderpy.
 
 ### Added
 
+- The moa and the emu can breed (vanilla `canCrossBreedWith` on both races; the emu is patched). Optional Better Crossbreeding patch: young are either parent's kind.
 - Optional patch for A Dog Said... Animal Prosthetics 2: the moa joins the emu's surgery categories 1 and 2.
 - Support for RimWorld 1.6.
 - `EggMoaUnfertilized`. The mod declared only its fertilized egg, which 1.3 tolerated. In 1.6
