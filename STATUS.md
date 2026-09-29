@@ -23,7 +23,7 @@ remaining:
   - feature: send the description to Steam (thanks line added 2026-09-29): item 3806762626 exists, so by hand or CI `update_description`, never from About.xml
   - feature: PR to upstream dninemfive/rw-moa (needs Virginie agreement)
 session:      maj:        2026-09-12, releve automatique
-updated:      2026-09-29, done
+updated:      2026-09-29, tested
 ---
 
 # Moa Renew — status
