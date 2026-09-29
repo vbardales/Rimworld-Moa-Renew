@@ -20,7 +20,7 @@ tested_on:
 workshop:      3806762626 (private, prepublished 0.1.0 on 2026-09-23)
 remaining:
   - unverified: patches and French text in game (offline lxml tests are green)
-  - unverified: passes P2-P5 (TESTING.md) not yet played; P1 passed 11/0/4 on 2026-09-29, @review capture read
+  - unverified: passes P3-P5 (TESTING.md) not yet played; P1 passed 11/0/4 and P2 (French) 8/0/4 on 2026-09-29, @review capture read
   - unverified: functional scenarios in game, no @wip, all conditional scenarios run, no manual test left
   - feature: send the description to Steam (thanks line added 2026-09-29): item 3806762626 exists, so by hand or CI `update_description`, never from About.xml
   - feature: PR to upstream dninemfive/rw-moa (needs Virginie agreement)
