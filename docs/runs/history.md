@@ -1,0 +1,1 @@
+2026-09-29 P1 p1-english (sans-facultatifs) 20260929-094701-837-9389: 11 passed, 0 failed, 4 skipped (optional-mod scenarios), exitReason passed; @review capture read: two moas on the map. Kept: summary, junit, messages, Player.log, minified capture.
