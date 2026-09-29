@@ -340,3 +340,14 @@ justified** (`Tests/Pickle/`, nine features, 13 local steps, `Check-Steps.ps1` g
 five passes declared in `TESTING.md` with the reasons for what is not applicable or not played. Replaces `workflow_stage: preTest`.
 Nothing has run in game: that is `done → tested` (all five passes, `@review` capture opened, no `@wip`, every `@requires` scenario
 run, EN and FR, no manual test left; breeding, real unfertilized laying, incubation and butchering are listed as not played).
+
+## Preview with the icon, gallery 00 — 2026-09-29 (owner's new rules, PUBLISHING.md)
+
+- `Mod/About/Preview.png` re-rendered (896 x 504, 540,304 bytes): the ModIcon cutout sits bottom-left, `+15deg`, on the veil's empty
+  corner, no overlap with the title, summary or badge. Cutout: `Art/cutout-icon.cjs` (flood fill from the border, threshold 40, the
+  outline never touches the frame), output `Art/ModIcon-cutout.png`; composition in `Art/render-preview.cjs`. Contrast minima unchanged
+  (title 7.68, suffix 6.85, summary 7.88, badge 7.00, `Art/preview-validation.json`). Image opened and looked at: no speckle left,
+  clean edge. Icon file itself untouched (owner-generated).
+- `Art/gallery/00-Preview.png` is a byte copy of the Preview (`cmp` identical). Captures follow as `01-`, `02-`: only the `@review`
+  capture of feature 03 once P1 has played and it has been read. Copy again whenever the Preview is regenerated.
+- `Art/Preview.ico` regenerated from it (ffmpeg, transparent margins). Not verified in the Explorer.

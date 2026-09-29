@@ -12,9 +12,10 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
  h1{margin:0;font-size:46px;font-weight:600;line-height:1.1;letter-spacing:0}h1 span{font-size:.65em;color:${p.inkSecondary}}
  .rule{width:58px;height:3px;background:${p.accent};margin-top:20px;margin-bottom:16px}
  p{margin:0;width:430px;font-size:21px;font-weight:400;line-height:1.45;letter-spacing:0}
+ .icon{position:absolute;left:-30px;bottom:-30px;width:240px;height:240px;transform:rotate(15deg);filter:drop-shadow(0 6px 16px rgba(0,0,0,.6))}
  .badge{position:absolute;right:0;top:0;width:80px;height:80px;background:${p.accent};clip-path:polygon(0 0,100% 0,100% 100%)}
  .version{position:absolute;left:869px;top:27px;transform:translate(-50%,-50%) rotate(45deg);font-size:26px;font-weight:700;line-height:1;color:${p.badgeInk}}
- </style><div class="veil"></div><div class="copy"><h1>Moa <span>Renew</span></h1><div class="rule"></div><p>Flightless birds from Reach.<br>Raise a flock for meat and eggs.</p></div><div class="badge"></div><div class="version">1.6</div>`;
+ </style><div class="veil"></div><div class="copy"><h1>Moa <span>Renew</span></h1><div class="rule"></div><p>Flightless birds from Reach.<br>Raise a flock for meat and eggs.</p></div><div class="badge"></div><div class="version">1.6</div><img class="icon" src="ModIcon-cutout.png" alt="">`;
  fs.writeFileSync(path.join(dir,'preview.html'),html);
  const browser = await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe'});
  try {
