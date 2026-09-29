@@ -1,2 +1,3 @@
 2026-09-29 P1 p1-english (sans-facultatifs) 20260929-094701-837-9389: 11 passed, 0 failed, 4 skipped (optional-mod scenarios), exitReason passed; @review capture read: two moas on the map. Kept: summary, junit, messages, Player.log, minified capture.
 2026-09-29 P2 p2-french 20260929-094702-823-a9e2: 8 passed, 0 failed, 4 skipped (optional-mod scenarios), exitReason passed; French labels and tool labels read from the loaded defs. Kept: summary, junit, messages, Player.log.
+2026-09-29 P3 p3-ads2 20260929-094703-716-d91f: 4 passed, 0 failed, 0 skipped, exitReason see summary; ADS 2 load order and categories 1/2 (not 3) played. Kept: summary, junit, messages, Player.log.
