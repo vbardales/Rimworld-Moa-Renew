@@ -7,8 +7,8 @@ packageId:    nelim.moa
 repo:         Rimworld-Moa-Renew
 visibility:   public
 detached:     yes
-stage:        showcase
-workflow_stage: l10n
+stage:        preTest
+workflow_stage: preTest
 licence:      open
 licence_at:   upstream LICENSE, MIT, copyright dninemfive 2021
 upstream_mod_remotes:
@@ -20,12 +20,11 @@ tested_on:
 workshop:      3806762626 (private, prepublished 0.1.0 on 2026-09-23)
 remaining:
   - unverified: patches and French text in game (offline lxml tests are green)
-  - feature: thanks to ADS 2, Nocturnal Animals (register, description, PUBLICATION.md)
   - feature: Pickle suite written and justified (none yet), then done
   - unverified: functional scenarios in game, no @wip, all conditional scenarios run, no manual test left
   - feature: PR to upstream dninemfive/rw-moa (needs Virginie agreement)
 session:      maj:        2026-09-12, releve automatique
-updated:      2026-09-29, audit and application
+updated:      2026-09-29, preTest
 ---
 
 # Moa Renew — status
@@ -323,3 +322,11 @@ Replaces the "no crossbreeding" decisions above for Better Crossbreeding and Dog
   DefRefs does not implement `PatchOperationAddModExtension`.
 - No `LoadFolders.xml`, no `modDependencies`; `loadAfter` DLC ordering and one `loadBefore` (ADS 2). `l10n → preTest` re-established 2026-09-29.
 Remaining for `preTest`: thanks to the four mods (description, register, PUBLICATION.md).
+
+## Stage preTest — 2026-09-29
+
+`l10n → preTest` established: French complete (11 fields), animal integrations decided and patched (ADS 2, moa x emu, Better
+Crossbreeding), offline checks rerun green (see above), dependencies none, `loadBefore` ADS 2, thanks drafted in `PUBLICATION.md`
+and named in the description (posting waits for the item to be public). Replaces `workflow_stage: l10n` above.
+Next, `preTest → done`: write a Pickle suite or justify its absence in writing (scope, passes in `TESTING.md`), keep
+`TEST_SCENARIOS.md` current, all offline tests green on the delivered version.
