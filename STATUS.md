@@ -19,8 +19,7 @@ settings_audit: not_applicable
 tested_on:
 workshop:      3806762626 (private, prepublished 0.1.0 on 2026-09-23)
 remaining:
-  - unverified: S5 existing colony (add the mod to a backed-up Core save and load it): not played, no scenario yet
-  - unverified: 4 cases listed as not played in TESTING.md (breeding, real unfertilized laying, incubation, butchering): to automate or justify as not applicable
+  - unverified: feature 10 (eggs, hatching, butchering) written and statically checked, pass P1 to rerun; dessicated emu texture not played
   - passes P1-P5 played 2026-09-29, 0 failed, see docs/runs/history.md; the only error line in each Player.log is the empty Pickle test mod
   - unverified: actual breeding, real unfertilized laying, incubation, butchering, dessicated emu texture (TESTING.md, not played)
   - feature: send the description to Steam (thanks line added 2026-09-29): item 3806762626 exists, so by hand or CI `update_description`, never from About.xml

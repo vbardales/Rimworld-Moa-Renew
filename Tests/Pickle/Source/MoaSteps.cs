@@ -342,5 +342,93 @@ namespace MoaRenew.PickleSteps
             string kind = hatcher.hatcherPawn == null ? "(null)" : hatcher.hatcherPawn.defName;
             ctx.Assert(kind == kindName, "egg '" + eggName + "' hatches into '" + kind + "', expected '" + kindName + "'");
         }
+
+        // ---------------------------------------------------------------- eggs, hatching, butchering (a loaded map)
+
+        private static Pawn Generate(PickleContext ctx, string kindName, Gender gender)
+        {
+            PawnKindDef kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(kindName);
+            ctx.Require(kind != null, "no pawn kind '" + kindName + "'");
+            Map map = Find.CurrentMap;
+            ctx.Require(map != null, "no current map: load a save first");
+            var ages = kind.RaceProps.lifeStageAges;
+            float adult = ages != null && ages.Count > 0 ? ages[ages.Count - 1].minAge : 0f;
+            var request = new PawnGenerationRequest(kind, Faction.OfPlayer, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: true,
+                fixedGender: gender, fixedBiologicalAge: adult);
+            Pawn pawn = PawnGenerator.GeneratePawn(request);
+            ctx.Require(CellFinder.TryFindRandomCellNear(map.Center, map, 30, c => c.Standable(map) && c.GetFirstPawn(map) == null, out IntVec3 cell, 400),
+                "no free cell near the map centre for a '" + kindName + "'");
+            GenSpawn.Spawn(pawn, cell, map, WipeMode.Vanish);
+            ctx.Require(pawn.Spawned, "the '" + kindName + "' could not be placed at " + cell);
+            return pawn;
+        }
+
+        private static Gender GenderOf(PickleContext ctx, string word)
+        {
+            ctx.Require(word == "female" || word == "male", "gender must be female or male, not '" + word + "'");
+            return word == "female" ? Gender.Female : Gender.Male;
+        }
+
+        /// <summary>The egg the layer builds when no male reached the female: the unfertilized def, no hatcher.</summary>
+        [Then("Moa Renew: a female {string} without a mate builds the egg {string}")]
+        public void UnfertilizedEgg(PickleContext ctx, string kindName, string eggName)
+        {
+            Pawn mother = Generate(ctx, kindName, Gender.Female);
+            CompEggLayer layer = mother.TryGetComp<CompEggLayer>();
+            ctx.Require(layer != null, "the '" + kindName + "' has no egg layer");
+            Thing egg = layer.ProduceEgg();
+            ctx.Require(egg != null, "the layer built no egg");
+            ctx.Assert(egg.def.defName == eggName, "the unmated '" + kindName + "' built '" + egg.def.defName + "', expected '" + eggName + "'");
+            ctx.Assert(egg.TryGetComp<CompHatcher>() == null, "the unfertilized egg '" + eggName + "' has a hatcher");
+        }
+
+        /// <summary>Fertilizes, lays, then forces the incubation to its end (the 7 days are the game's, not asserted) and reads what is born.</summary>
+        [Then("Moa Renew: a female {string} fertilized by a male {string} builds the egg {string}, which hatches into a {string} or a {string}")]
+        public void FertilizedEggHatches(PickleContext ctx, string motherKind, string fatherKind, string eggName, string kindA, string kindB)
+        {
+            Map map = Find.CurrentMap;
+            Pawn mother = Generate(ctx, motherKind, Gender.Female);
+            Pawn father = Generate(ctx, fatherKind, Gender.Male);
+            CompEggLayer layer = mother.TryGetComp<CompEggLayer>();
+            ctx.Require(layer != null, "the '" + motherKind + "' has no egg layer");
+            for (int i = 0; i < 50 && !layer.FullyFertilized; i++)
+            {
+                layer.Fertilize(father);
+            }
+
+            ctx.Require(layer.FullyFertilized, "the layer is not fully fertilized after 50 matings");
+            Thing egg = layer.ProduceEgg();
+            ctx.Require(egg != null, "the layer built no egg");
+            ctx.Assert(egg.def.defName == eggName, "the fertilized '" + motherKind + "' built '" + egg.def.defName + "', expected '" + eggName + "'");
+            CompHatcher hatcher = egg.TryGetComp<CompHatcher>();
+            ctx.Require(hatcher != null, "the fertilized egg has no hatcher");
+            IntVec3 cell = mother.Position;
+            GenSpawn.Spawn(egg, cell, map, WipeMode.Vanish);
+            FieldInfo progress = typeof(CompHatcher).GetField("gestateProgress", BindingFlags.Instance | BindingFlags.NonPublic);
+            ctx.Require(progress != null, "CompHatcher has no field gestateProgress in this game version");
+            progress.SetValue(hatcher, 1f);
+            hatcher.Hatch();
+            List<Pawn> born = map.mapPawns.AllPawnsSpawned.Where(p => p != mother && p != father && p.RaceProps.Animal && p.ageTracker.CurLifeStage.developmentalStage.Baby() && (p.kindDef.defName == kindA || p.kindDef.defName == kindB)).ToList();
+            ctx.Assert(born.Count == 1, "the egg hatched " + born.Count + " young of kind '" + kindA + "' or '" + kindB + "', expected one");
+        }
+
+        /// <summary>What a butcher gets from the animal: the meat and the leather its race names, in a real quantity.</summary>
+        [Then("Moa Renew: butchering a {string} gives its meat and its leather")]
+        public void Butchering(PickleContext ctx, string kindName)
+        {
+            Pawn animal = Generate(ctx, kindName, Gender.Female);
+            Pawn butcher = Find.CurrentMap.mapPawns.FreeColonists.FirstOrDefault();
+            ctx.Require(butcher != null, "the loaded map has no colonist to butcher with");
+            ThingDef meat = animal.RaceProps.meatDef;
+            ThingDef leather = animal.RaceProps.leatherDef;
+            ctx.Require(meat != null, "the race '" + kindName + "' names no meat");
+            List<Thing> products = animal.ButcherProducts(butcher, 1f).ToList();
+            int meatCount = products.Where(t => t.def == meat).Sum(t => t.stackCount);
+            ctx.Assert(meatCount > 0, "butchering a '" + kindName + "' gave no '" + meat.defName + "'");
+            if (leather != null)
+            {
+                ctx.Assert(products.Any(t => t.def == leather), "butchering a '" + kindName + "' gave no '" + leather.defName + "'");
+            }
+        }
     }
 }
