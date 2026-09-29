@@ -7,8 +7,8 @@ packageId:    nelim.moa
 repo:         Rimworld-Moa-Renew
 visibility:   public
 detached:     yes
-stage:        tested
-workflow_stage: tested
+stage:        done
+workflow_stage: done
 licence:      open
 licence_at:   upstream LICENSE, MIT, copyright dninemfive 2021
 upstream_mod_remotes:
@@ -16,14 +16,17 @@ upstream_mod_remotes:
 dependencies: none
 showcase:     icon and preview generated
 settings_audit: not_applicable
-tested_on:    2026-09-29, RimWorld 1.6, passes P1-P5 (p1-english 11/0/4, p2-french 8/0/4, p3-ads2 4/0/0, p4-crossbreeding 3/0/0, p5-dogsmate 3/0/0), see docs/runs/history.md
+tested_on:
 workshop:      3806762626 (private, prepublished 0.1.0 on 2026-09-23)
 remaining:
+  - unverified: S5 existing colony (add the mod to a backed-up Core save and load it): not played, no scenario yet
+  - unverified: 4 cases listed as not played in TESTING.md (breeding, real unfertilized laying, incubation, butchering): to automate or justify as not applicable
+  - passes P1-P5 played 2026-09-29, 0 failed, see docs/runs/history.md; the only error line in each Player.log is the empty Pickle test mod
   - unverified: actual breeding, real unfertilized laying, incubation, butchering, dessicated emu texture (TESTING.md, not played)
   - feature: send the description to Steam (thanks line added 2026-09-29): item 3806762626 exists, so by hand or CI `update_description`, never from About.xml
   - feature: PR to upstream dninemfive/rw-moa (needs Virginie agreement)
 session:      maj:        2026-09-12, releve automatique
-updated:      2026-09-29, tested
+updated:      2026-09-29, done
 ---
 
 # Moa Renew — status
@@ -353,3 +356,7 @@ run, EN and FR, no manual test left; breeding, real unfertilized laying, incubat
 ## Tested — 2026-09-29
 
 All five Pickle passes played today, exitReason passed, 0 failed (docs/runs/history.md). Every `@requires` scenario ran with its mod on the map (P3 ADS 2, P4 Better Crossbreeding, P5 Dogs Mate), no `@wip`, EN and FR both read (P1, P2), save and reload played (P1). `@review` capture opened: two moas on the map (gallery 01). Log: one error, "Pickle tests did not load any content", the empty test mod, not the mod under test. Not played, listed in TESTING.md: actual breeding, real unfertilized laying, incubation, butchering. Replaces `workflow_stage: done`.
+
+## Back to done — 2026-09-29
+
+Moved to tested too early. Checked: scenarios discovered (17) equal played plus skipped in each pass; the only [ERROR] in the five Player.log is "Pickle tests did not load any content", the test mod having no Defs. Missing for tested: S5 existing colony not played; breeding, unfertilized laying, incubation and butchering are "not played", not "not applicable". Replaces workflow_stage: tested.
