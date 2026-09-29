@@ -1,0 +1,15 @@
+test_ads2_absent_changes_nothing (__main__.Patches.test_ads2_absent_changes_nothing) ... ok
+test_ads2_load_order_and_no_dependency (__main__.Patches.test_ads2_load_order_and_no_dependency) ... ok
+test_ads2_moa_where_the_emu_is (__main__.Patches.test_ads2_moa_where_the_emu_is) ... ok
+test_ads2_test_can_fail (__main__.Patches.test_ads2_test_can_fail) ... ok
+test_bc_absent_changes_nothing (__main__.Patches.test_bc_absent_changes_nothing) ... ok
+test_bc_existing_extension_is_reused (__main__.Patches.test_bc_existing_extension_is_reused) ... ok
+test_bc_present_random_both_ways (__main__.Patches.test_bc_present_random_both_ways) ... ok
+test_crossbreeding_both_ways (__main__.Patches.test_crossbreeding_both_ways) ... ok
+test_emu_existing_list_is_appended_not_duplicated (__main__.Patches.test_emu_existing_list_is_appended_not_duplicated) ... ok
+test_guards (__main__.Patches.test_guards) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.869s
+
+OK

@@ -19,10 +19,9 @@ settings_audit: not_applicable
 tested_on:
 workshop:      3806762626 (private, prepublished 0.1.0 on 2026-09-23)
 remaining:
-  - unverified: ADS 2 patch applied to real Core/ADS2 XML (lxml test, failing-predicate check) and in game
+  - unverified: patches and French text in game (offline lxml tests are green)
   - feature: thanks to ADS 2, Nocturnal Animals (register, description, PUBLICATION.md)
   - feature: Pickle suite written and justified (none yet), then done
-  - unverified: 11 French fields in game (test_content.py could not be rerun: no Python on this machine)
   - unverified: functional scenarios in game, no @wip, all conditional scenarios run, no manual test left
   - feature: PR to upstream dninemfive/rw-moa (needs Virginie agreement)
 session:      maj:        2026-09-12, releve automatique
@@ -312,3 +311,15 @@ Replaces the "no crossbreeding" decisions above for Better Crossbreeding and Dog
 - Dogs Mate: no patch; it cross-checks the lists at start, and both sides are now declared.
 - **Unverified**: none of these patches applied to real XML or in game (no Python/lxml here); the BC `Extension` type name and `Random`
   element shape are read from its example only. Thanks to Better Crossbreeding and Dogs Mate still to write.
+
+## Offline checks rerun — 2026-09-29 (revision after 5f-crossbreeding commit, with `uv run --with lxml`)
+
+- `Tests/test_content.py`: PASS, 9 XML files, 11 EN/FR fields covered (results in `Tests/content-results.txt`).
+- `Tests/test_patches.py`: 10 tests OK against real Core 1.6 and ADS 2's real `Animal_Categories.xml`: moa lands in ADS Cat1+Cat2 only,
+  where the emu is; nothing changes with the mods absent; emu list appended, not duplicated; BC extension created or reused,
+  `Random` both ways (`Tests/patches-results.txt`). The "test can fail" case is weak: it shows the always-true predicate would reach
+  Cat3, not a full red run of the real patch.
+- `Check-DefRefs.ps1` (Core alone), `Check-XmlFields.ps1` (7 files), `Check-DefInjected.ps1` (11 keys, 0 errors): clean.
+  DefRefs does not implement `PatchOperationAddModExtension`.
+- No `LoadFolders.xml`, no `modDependencies`; `loadAfter` DLC ordering and one `loadBefore` (ADS 2). `l10n → preTest` re-established 2026-09-29.
+Remaining for `preTest`: thanks to the four mods (description, register, PUBLICATION.md).
