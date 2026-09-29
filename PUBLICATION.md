@@ -37,4 +37,4 @@ The moa is still my favourite big bird to breed, so I got it running on 1.6 (Wil
 
 ## Also in the description (About.xml)
 
-Thanks line names ADS 2, Nocturnal Animals, Better Crossbreeding and Dogs mate: their files or mechanisms were read.
+Thanks line added (2026-09-29) naming the four mods. The description is only sent at creation: the item already exists, so it reaches Steam by hand or by CI (`update_description`).
