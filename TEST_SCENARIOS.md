@@ -1,6 +1,6 @@
 # Functional validation scenarios
 
-Status: NOT EXECUTED. Run manually in RimWorld 1.6; do not infer success from static tests.
+Status: NOT EXECUTED in game. Covered by the Pickle suite (see TESTING.md); nothing here is a pass.
 Use a disposable save. Record game build, language, active mod list, date, actions, observed
 results and relevant Player.log excerpts. Repeat S1–S5 in English and French. Inspect the log
 for missing Defs, translation keys, textures, XML errors and exceptions after every scenario.

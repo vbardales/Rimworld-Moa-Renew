@@ -7,8 +7,8 @@ packageId:    nelim.moa
 repo:         Rimworld-Moa-Renew
 visibility:   public
 detached:     yes
-stage:        preTest
-workflow_stage: preTest
+stage:        done
+workflow_stage: done
 licence:      open
 licence_at:   upstream LICENSE, MIT, copyright dninemfive 2021
 upstream_mod_remotes:
@@ -20,11 +20,11 @@ tested_on:
 workshop:      3806762626 (private, prepublished 0.1.0 on 2026-09-23)
 remaining:
   - unverified: patches and French text in game (offline lxml tests are green)
-  - feature: Pickle suite written and justified (none yet), then done
+  - unverified: five Pickle passes (P1-P5, TESTING.md) never played; @review capture unread
   - unverified: functional scenarios in game, no @wip, all conditional scenarios run, no manual test left
   - feature: PR to upstream dninemfive/rw-moa (needs Virginie agreement)
 session:      maj:        2026-09-12, releve automatique
-updated:      2026-09-29, preTest
+updated:      2026-09-29, done
 ---
 
 # Moa Renew — status
@@ -330,3 +330,12 @@ Crossbreeding), offline checks rerun green (see above), dependencies none, `load
 and named in the description (posting waits for the item to be public). Replaces `workflow_stage: l10n` above.
 Next, `preTest → done`: write a Pickle suite or justify its absence in writing (scope, passes in `TESTING.md`), keep
 `TEST_SCENARIOS.md` current, all offline tests green on the delivered version.
+
+## Stage done — 2026-09-29
+
+`preTest → done`: functional scenarios written (`TEST_SCENARIOS.md`, S1–S6), offline tests green on the delivered version
+(`test_content.py`, `test_patches.py`, three PowerShell checks; results in `Tests/*-results.txt`), Pickle suite **written and
+justified** (`Tests/Pickle/`, nine features, 13 local steps, `Check-Steps.ps1` green: every line resolves to one step), scope and
+five passes declared in `TESTING.md` with the reasons for what is not applicable or not played. Replaces `workflow_stage: preTest`.
+Nothing has run in game: that is `done → tested` (all five passes, `@review` capture opened, no `@wip`, every `@requires` scenario
+run, EN and FR, no manual test left; breeding, real unfertilized laying, incubation and butchering are listed as not played).

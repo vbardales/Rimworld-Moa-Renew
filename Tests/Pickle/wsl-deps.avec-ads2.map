@@ -1,0 +1,6 @@
+# Pass "avec-ads2": A Dog Said... Animal Prosthetics 2 beside this mod, nothing else optional.
+# The first line names this mod own folder first: the staging activates map mods in file order, then adds the
+# mod under test, and does not sort by loadBefore, so ADS 2 alone would load before this mod and copy its category
+# lists before the patch adds the moa (seen on Ebbbs Renew, 2026-09-25). Plays 05 and 01. Workshop 3238353862.
+nelim.moa   path:MoaRenew/Mod
+SamBucher.ADogSaidAnimalProsthetics2   3238353862
