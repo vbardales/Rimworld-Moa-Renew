@@ -23,16 +23,18 @@ Your crossbreeding is why my moa and emu can have chicks that go either way :) T
 
 ### Dogs mate (Continued)
 
+Page read 2026-09-29: Mlie, English, active, replies within a day. Do not ask for anything: the comment thanks him and states what the moa does.
+
 ```
 Since 1.6 moves crossbreeding into vanilla lists, a moa and an emu each have to name the other, and your note about animals wrongly configured on one side is exactly the trap I was heading for. Thanks for the write-up xD [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806762626]Moa Renew[/url]
 ```
 
 ### Moa (original), Poshspider / dninemfive / Serpyderpy
 
-To adapt after reading the page: credit the author of the page and whoever kept it alive, in one message.
+Page read 2026-09-29: the page is dninemfive's (creator, English, casual). Poshspider is the original author of the bird, Serpyderpy the artist. Another 1.6 port may exist (2025 comments).
 
 ```
-The moa is still my favourite big bird to breed, so I got it running on 1.6 (Wildness stat, the missing unfertilized egg) and kept every value as you set them, emu comparisons in the comments included. Thanks to Poshspider for the bird, dninemfive for keeping it going through 1.3 and Serpyderpy for the art :) If any of you wants it taken down or wants to take it over, just say. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806762626]Moa Renew[/url]
+Hi dninemfive, the moa is still my favourite big bird to breed, so I got it running on 1.6 (Wildness stat, the missing unfertilized egg) and kept every value as you set them, emu comparisons in the comments included. Thanks for keeping it going through 1.3, to Poshspider for the bird and to Serpyderpy for the art :) If any of you wants it taken down or wants to take it over, just say. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806762626]Moa Renew[/url]
 ```
 
 ## Also in the description (About.xml)
