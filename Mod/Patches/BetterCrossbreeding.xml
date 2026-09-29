@@ -4,7 +4,7 @@
   <!--
     Native support for Better Crossbreeding (DizzyEevee.BetterCrossbreeding). Optional, no dependency.
 
-    That mod decides what is born from the PawnKindDef of the MOTHER (DZY.Crossbreeding.Extension, outcomes
+    That mod decides what is born from the PawnKindDef of the MOTHER (DZY.CrossBreeding.Extension, outcomes
     keyed by the father). Without it the child is the mother's kind. Here the young of a moa/emu pairing is
     either parent's kind on a coin flip (Random), in both directions. Whether the pair can mate at all is
     vanilla and lives in Defs/Races_Animal_Moa.xml and Patches/EmuCrossbreeding.xml.

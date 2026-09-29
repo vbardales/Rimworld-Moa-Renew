@@ -5,3 +5,5 @@
   only with Virginie's agreement.
 - **Animal integrations: decided 2026-09-29, see STATUS.md.**
 - Pickle suite (written), then `done`.
+- **Description on Steam**: the thanks line in About.xml (2026-09-29) reaches the page only by hand or by CI `update_description`
+  (SetItemDescription runs at item creation only). Do it at the same time as the first CI publish.
