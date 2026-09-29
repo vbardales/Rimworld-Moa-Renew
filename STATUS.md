@@ -316,7 +316,7 @@ Replaces the "no crossbreeding" decisions above for Better Crossbreeding and Dog
 - `Tests/test_content.py`: PASS, 9 XML files, 11 EN/FR fields covered (results in `Tests/content-results.txt`).
 - `Tests/test_patches.py`: 10 tests OK against real Core 1.6 and ADS 2's real `Animal_Categories.xml`: moa lands in ADS Cat1+Cat2 only,
   where the emu is; nothing changes with the mods absent; emu list appended, not duplicated; BC extension created or reused,
-  `Random` both ways (`Tests/patches-results.txt`). The "test can fail" case is weak: it shows the always-true predicate would reach
+  `Random` both ways (`Tests/patches-results.txt`). The "test can fail" case now puts the always-true predicate back into a copy of the patch and shows it reaches Cat3.
   Cat3, not a full red run of the real patch.
 - `Check-DefRefs.ps1` (Core alone), `Check-XmlFields.ps1` (7 files), `Check-DefInjected.ps1` (11 keys, 0 errors): clean.
   DefRefs does not implement `PatchOperationAddModExtension`.

@@ -10,6 +10,6 @@ test_emu_existing_list_is_appended_not_duplicated (__main__.Patches.test_emu_exi
 test_guards (__main__.Patches.test_guards) ... ok
 
 ----------------------------------------------------------------------
-Ran 10 tests in 1.869s
+Ran 10 tests in 5.481s
 
 OK

@@ -98,12 +98,15 @@ class Patches(unittest.TestCase):
         self.assertEqual(LX.tostring(doc), before)
 
     def test_ads2_test_can_fail(self):
-        # The trap: an always-true predicate would reach every recipe. Prove the checker would see it.
+        # Put the always-true predicate trap back into a copy of the patch: the same assertions must go red.
         doc = self.ads_doc()
-        for n in doc.xpath('/Defs/RecipeDef[@Name="ADS_Cat1" or "ADS_Cat2"]/recipeUsers'):
-            LX.SubElement(n, 'li').text = 'Moa'
-        self.assertNotEqual(doc.xpath('/Defs/RecipeDef[defName="Unrelated"]/recipeUsers/li[text()="Moa"]'), None)
-        self.assertEqual(len(doc.xpath('/Defs/RecipeDef[@Name="ADS_Cat3"]/recipeUsers/li[text()="Moa"]')), 1)
+        bad = LX.parse(str(MOD / "Patches/AnimalProsthetics2.xml")).getroot()
+        for x in bad.iter("xpath"):
+            x.text = x.text.replace('[@Name="ADS_Cat2"]', '[@Name="ADS_Cat1" or "ADS_Cat2" or "ADS_Cat3"]')
+        for op in bad.findall("Operation"):
+            apply(op, doc, set())
+        cat3 = [li.text for li in doc.xpath('/Defs/RecipeDef[@Name="ADS_Cat3"]/recipeUsers/li')]
+        self.assertIn("Moa", cat3, "the trap must reach Cat3, which the real patch never does")
 
     def test_crossbreeding_both_ways(self):
         doc = fresh()
