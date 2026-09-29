@@ -2,3 +2,4 @@
 2026-09-29 P2 p2-french 20260929-094702-823-a9e2: 8 passed, 0 failed, 4 skipped (optional-mod scenarios), exitReason passed; French labels and tool labels read from the loaded defs. Kept: summary, junit, messages, Player.log.
 2026-09-29 P3 p3-ads2 20260929-094703-716-d91f: 4 passed, 0 failed, 0 skipped, exitReason see summary; ADS 2 load order and categories 1/2 (not 3) played. Kept: summary, junit, messages, Player.log.
 2026-09-29 P4 p4-crossbreeding 20260929-094704-336-da50: 3 passed, 0 failed, 0 skipped, exitReason passed; Better Crossbreeding extension read in both directions. Kept: summary, junit, messages, Player.log.
+2026-09-29 P5 p5-dogsmate 20260929-094704-968-1caa: 3 passed, 0 failed, 0 skipped, exitReason passed; pair unchanged and log quiet with Dogs Mate. Kept: summary, junit, messages, Player.log.

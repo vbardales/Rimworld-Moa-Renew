@@ -7,8 +7,8 @@ packageId:    nelim.moa
 repo:         Rimworld-Moa-Renew
 visibility:   public
 detached:     yes
-stage:        done
-workflow_stage: done
+stage:        tested
+workflow_stage: tested
 licence:      open
 licence_at:   upstream LICENSE, MIT, copyright dninemfive 2021
 upstream_mod_remotes:
@@ -16,12 +16,10 @@ upstream_mod_remotes:
 dependencies: none
 showcase:     icon and preview generated
 settings_audit: not_applicable
-tested_on:
+tested_on:    2026-09-29, RimWorld 1.6, passes P1-P5 (p1-english 11/0/4, p2-french 8/0/4, p3-ads2 4/0/0, p4-crossbreeding 3/0/0, p5-dogsmate 3/0/0), see docs/runs/history.md
 workshop:      3806762626 (private, prepublished 0.1.0 on 2026-09-23)
 remaining:
-  - unverified: patches and French text in game (offline lxml tests are green)
-  - unverified: pass P5 (Dogs Mate) not yet played; P4 (Better Crossbreeding) 3/0/0 played; P3 (ADS 2) 4/0/0 played; P1 passed 11/0/4 and P2 (French) 8/0/4 on 2026-09-29, @review capture read
-  - unverified: functional scenarios in game, no @wip, all conditional scenarios run, no manual test left
+  - unverified: actual breeding, real unfertilized laying, incubation, butchering, dessicated emu texture (TESTING.md, not played)
   - feature: send the description to Steam (thanks line added 2026-09-29): item 3806762626 exists, so by hand or CI `update_description`, never from About.xml
   - feature: PR to upstream dninemfive/rw-moa (needs Virginie agreement)
 session:      maj:        2026-09-12, releve automatique
@@ -351,3 +349,7 @@ run, EN and FR, no manual test left; breeding, real unfertilized laying, incubat
 - `Art/gallery/00-Preview.png` is a byte copy of the Preview (`cmp` identical). Captures follow as `01-`, `02-`: only the `@review`
   capture of feature 03 once P1 has played and it has been read. Copy again whenever the Preview is regenerated.
 - `Art/Preview.ico` regenerated from it (ffmpeg, transparent margins). Not verified in the Explorer.
+
+## Tested — 2026-09-29
+
+All five Pickle passes played today, exitReason passed, 0 failed (docs/runs/history.md). Every `@requires` scenario ran with its mod on the map (P3 ADS 2, P4 Better Crossbreeding, P5 Dogs Mate), no `@wip`, EN and FR both read (P1, P2), save and reload played (P1). `@review` capture opened: two moas on the map (gallery 01). Log: one error, "Pickle tests did not load any content", the empty test mod, not the mod under test. Not played, listed in TESTING.md: actual breeding, real unfertilized laying, incubation, butchering. Replaces `workflow_stage: done`.
