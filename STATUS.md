@@ -1,7 +1,7 @@
 ---
 localization: complete
 translation_en: complete
-translation_fr: complete
+translation_fr: partial
 mod:          Moa Renew
 packageId:    nelim.moa
 repo:         Rimworld-Moa-Renew
@@ -19,6 +19,7 @@ settings_audit: not_applicable
 tested_on:
 workshop:      3806762626 (private, prepublished 0.1.0 on 2026-09-23)
 remaining:
+  - unverified: French review by Virginie (TRANSLATIONS.md 2026-09-30); French files listed in the Translation audit 2026-09-30
   - unverified: feature 10 (eggs, hatching, butchering) written and statically checked, pass P1 to rerun; dessicated emu texture not played
   - passes P1-P5 played 2026-09-29, 0 failed, see docs/runs/history.md; the only error line in each Player.log is the empty Pickle test mod
   - feature: send the description to Steam (thanks line added 2026-09-29): item 3806762626 exists, so by hand or CI `update_description`, never from About.xml
@@ -358,3 +359,11 @@ All five Pickle passes played today, exitReason passed, 0 failed (docs/runs/hist
 ## Back to done — 2026-09-29
 
 Moved to tested too early. Checked: scenarios discovered (17) equal played plus skipped in each pass; the only [ERROR] in the five Player.log is "Pickle tests did not load any content", the test mod having no Defs. Missing for tested: S5 existing colony not played; breeding, unfertilized laying, incubation and butchering are "not played", not "not applicable". Replaces workflow_stage: tested.
+
+### Translation audit 2026-09-30 (French pass after the gender-agreement rule)
+
+Where the French lives: `Mod/Languages/French/DefInjected/ThingDef/Moa.xml` (10 fields: label, description, `race.meatLabel`, tools claws, beak and head, both eggs label and description) and `Mod/Languages/French/DefInjected/PawnKindDef/Moa.xml` (label). No Keyed file, no grammar rule, no `{PAWN_...}` placeholder anywhere in the mod, so no gender switch is needed: every French text names a species or an egg, none agrees with a pawn whose gender the game supplies. Read one by one: `moa` (invariable), `griffes`, `bec`, `tête`, `viande de moa`, `œuf de moa (fécondé)` and `(non fécondé)` (agree with the noun `œuf`, masculine, a thing), the two egg descriptions (`un petit moa`, `il peut être mangé`, generic masculine for the species and the egg), the moa description (`Domestiqué depuis longtemps, il vit`, agrees with `un grand oiseau`, the species).
+
+Flagged for Virginie: `un petit moa` and `il vit` are masculine by the species noun, not by a pawn; if the rule wants an epicene wording for animals, those two sentences are the ones to reword. `œuf de moa (fécondé)`: the parenthesis is the qualifier of a thing, not a feminine ending. Nothing changed in the files, so no French file is newer than the 2026-09-29 pass.
+
+`translation_fr: partial`, `unverified` entry "French review by Virginie" added. Not marked reviewed.
