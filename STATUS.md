@@ -20,12 +20,13 @@ tested_on:
 workshop:      3806762626 (private, prepublished 0.1.0 on 2026-09-23)
 remaining:
   - unverified: French review by Virginie (TRANSLATIONS.md 2026-09-30); French files listed in the Translation audit 2026-09-30
-  - unverified: feature 10 (eggs, hatching, butchering) written and statically checked, pass P1 to rerun; dessicated emu texture not played
+  - defect: feature 10 played 2026-09-30 (P6), two scenarios red: fertilized egg hatches 0 young (moa x moa, moa x emu); unfertilized egg and butchering green; diagnose (step or mod), replay alone, then non-regression passes last
+  - unverified: dessicated emu texture not played
   - passes P1-P5 played 2026-09-29, 0 failed, see docs/runs/history.md; the only error line in each Player.log is the empty Pickle test mod
   - feature: send the description to Steam (thanks line added 2026-09-29): item 3806762626 exists, so by hand or CI `update_description`, never from About.xml
   - feature: PR to upstream dninemfive/rw-moa (needs Virginie agreement)
 session:      maj:        2026-09-12, releve automatique
-updated:      2026-09-29, done
+updated:      2026-10-02, done
 ---
 
 # Moa Renew — status
@@ -367,3 +368,12 @@ Where the French lives: `Mod/Languages/French/DefInjected/ThingDef/Moa.xml` (10 
 Flagged for Virginie: `un petit moa` and `il vit` are masculine by the species noun, not by a pawn; if the rule wants an epicene wording for animals, those two sentences are the ones to reword. `œuf de moa (fécondé)`: the parenthesis is the qualifier of a thing, not a feminine ending. Nothing changed in the files, so no French file is newer than the 2026-09-29 pass.
 
 `translation_fr: partial`, `unverified` entry "French review by Virginie" added. Not marked reviewed.
+
+## Audit 2026-10-02 (AUDIT.md, tree 880b394 + docs/TEXTS.md)
+
+Old `done`, retained **done** (`workflow_stage: done`). Session title `moa / done`.
+- Offline rerun today: `test_content.py` PASS (9 XML, 11 EN/FR fields), `test_patches.py` 10 OK.
+- Git: `Mod/About/PublishedFileId.txt` tracked (3806762626); CHANGELOG opens with `## [0.1.0]`. No `.dds` or `.ico` tracked, both ignored. Upstream repo `dninemfive/rw-moa` recorded.
+- Evidence: none in git; `Tests/Pickle/Evidence/` ignored. P6 minified (report.html and PNGs removed, 33 MB to 9 MB). P6 was missing from `docs/runs/history.md`: added.
+- `tested` blocked: P6 has two red scenarios, not replayed green (feature 10, hatching).
+- Not blocking: Preview line-art protocol (`Art/echo.png`, PUBLISHING.md 2026-10-02) targets new Previews. French review by Virginie still open.
