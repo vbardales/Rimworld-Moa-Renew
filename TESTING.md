@@ -1,6 +1,6 @@
 # Testing — Moa Renew
 
-Offline first, then the game. Nothing here is a claim that a run passed: no Pickle pass has been played yet.
+Offline first, then the game. Passes P1-P5 played 2026-09-29 (green); P6 (feature 10) played 2026-09-30 with two red scenarios, see `docs/runs/history.md`.
 
 ## Offline (no game), all green on 2026-09-29
 
@@ -62,3 +62,8 @@ the `@review` capture opened and read (minified to JPEG). Never a whole `screens
 first, then discovered against played. Keep the latest report per pass for the revision in the repository; delete the superseded one once
 the newer exists; never delete what `STATUS.md` points to. History is one line per run in `docs/runs/`. Put the SHA in the request label:
 the tree is staged when the ticket is played, not when it is filed.
+
+## Order of the remaining passes
+
+Scenarios never green or red go first, alone, as small tickets: `10-eggs-hatching-butchery` (`-Filter` on the two red hatching scenarios) until green.
+The non-regression passes (P1-P5 complete, with their languages) are filed together at the end, on the final revision.

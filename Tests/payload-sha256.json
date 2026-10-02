@@ -1,7 +1,7 @@
 {
-  "Mod/About/About.xml": "4a7f777dcd9bd18a5d6edaf24f3a6317bb0f7bbb70c57e17d23a151371c6a2aa",
+  "Mod/About/About.xml": "0144d78d7d9222fe1c4f40705ec65fc2f073e820b2549edbae564d463b58f58f",
   "Mod/About/ModIcon.png": "3954ed5808925a0675b1febe0b9810636a301b0ca3a7ed499dbe1d6723ba0797",
-  "Mod/About/Preview.png": "1d9a806a05a564581f5f0197cd6cd71488500275d668698dc2222e814a86c122",
+  "Mod/About/Preview.png": "3431942a97344717f27a9f471ab2c7a9de3a602c78a4f6e0a0af90f32653f0da",
   "Mod/About/PublishedFileId.txt": "faf664bd64e47e18fd8213a11836e325ff35a0491ac74bd0f8a0076e5a7b039d",
   "Mod/Defs/Items_Eggs_Moa.xml": "926040786a59fba40668eae78be60d337ab1cf335efb8befd3bfeeeece2ab39d",
   "Mod/Defs/Items_MoaEggUnfertilized.xml": "e834fc80c3407de54d151814678fb6c11b4d61c0e7976df98d5c8028f10a2f19",
@@ -11,7 +11,7 @@
   "Mod/Languages/French/DefInjected/ThingDef/Moa.xml": "bdf6aafba61b888d16fd6b3c89568b95d11b8a5cfc2ce48ba02fc059951c4ebd",
   "Mod/LICENSE": "3ce048f84941f580ba7011479360e1668b93f559522e1a0086e9a7ca67813506",
   "Mod/Patches/AnimalProsthetics2.xml": "6e57c76266fcad74939edd8c306b650728a813470f2995531c744b824f16460f",
-  "Mod/Patches/BetterCrossbreeding.xml": "e3847ff3947071d2e430aaab8478f80fbb78eb379f9cfc5d463a2e9fef85387c",
+  "Mod/Patches/BetterCrossbreeding.xml": "fd377498fc08bdb1d9b87c936b8cbf77900982b9e6eb6b574ad476d446f1c6c8",
   "Mod/Patches/EmuCrossbreeding.xml": "516b5e6133f5d5dfc06c9d7c82ef41ef95d6b07c21191061dc02fe3e2e7b6d42",
   "Mod/Textures/Things/Pawn/Animal/Moa_Serpy/moa_east.dds": "b747a47091deb9ab0f47b61f244eb3eb0c851daf50d93f90ce600f347e745ce6",
   "Mod/Textures/Things/Pawn/Animal/Moa_Serpy/moa_east.png": "4be76862b30a141e02a74ff4a40f78d7f56cccd334caa522bad2d5e5407b2f46",
