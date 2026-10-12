@@ -406,10 +406,14 @@ namespace MoaRenew.PickleSteps
             GenSpawn.Spawn(egg, cell, map, WipeMode.Vanish);
             FieldInfo progress = typeof(CompHatcher).GetField("gestateProgress", BindingFlags.Instance | BindingFlags.NonPublic);
             ctx.Require(progress != null, "CompHatcher has no field gestateProgress in this game version");
+            HashSet<Pawn> before = new HashSet<Pawn>(map.mapPawns.AllPawnsSpawned);
             progress.SetValue(hatcher, 1f);
             hatcher.Hatch();
-            List<Pawn> born = map.mapPawns.AllPawnsSpawned.Where(p => p != mother && p != father && p.RaceProps.Animal && p.ageTracker.CurLifeStage.developmentalStage.Baby() && (p.kindDef.defName == kindA || p.kindDef.defName == kindB)).ToList();
-            ctx.Assert(born.Count == 1, "the egg hatched " + born.Count + " young of kind '" + kindA + "' or '" + kindB + "', expected one");
+            List<Pawn> fresh = map.mapPawns.AllPawnsSpawned.Where(p => !before.Contains(p)).ToList();
+            string seen = string.Join(", ", fresh.Select(p => p.kindDef.defName + "/" + p.ageTracker.CurLifeStage.defName + "/" + p.ageTracker.CurLifeStage.developmentalStage).ToArray());
+            List<Pawn> born = fresh.Where(p => p.RaceProps.Animal && (p.kindDef.defName == kindA || p.kindDef.defName == kindB)).ToList();
+            ctx.Assert(born.Count == 1, "the egg hatched " + born.Count + " young of kind '" + kindA + "' or '" + kindB + "', expected one; pawns that appeared: [" + seen + "]; egg spawned after Hatch: " + egg.Spawned + ", destroyed: " + egg.Destroyed);
+            ctx.Assert(born.Count != 1 || born[0].ageTracker.CurLifeStage.developmentalStage.Baby(), "the hatched young is not in a baby stage: " + seen);
         }
 
         /// <summary>What a butcher gets from the animal: the meat and the leather its race names, in a real quantity.</summary>
