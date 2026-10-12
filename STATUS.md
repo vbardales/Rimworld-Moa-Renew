@@ -1,14 +1,14 @@
 ---
 localization: complete
 translation_en: complete
-translation_fr: partial
+translation_fr: complete
 mod:          Moa Renew
 packageId:    nelim.moa
 repo:         Rimworld-Moa-Renew
 remote:       https://github.com/vbardales/Rimworld-Moa-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: writeTests[1.0.0]
+workflow_stage: playTests[1.0.0]
 licence:      open
 licence_at:   upstream LICENSE, MIT, copyright dninemfive 2021
 upstream_mod_remotes:
@@ -19,15 +19,14 @@ settings_audit: not_applicable
 tested_on:
 workshop:      3806762626 (private, prepublished 0.1.0 on 2026-09-23)
 remaining:
-  - unverified: French review by Virginie (TRANSLATIONS.md 2026-09-30); French files listed in the Translation audit 2026-09-30
   - defect: feature 10 played 2026-09-30 (P6), two scenarios red: fertilized egg hatches 0 young (moa x moa, moa x emu); unfertilized egg and butchering green; diagnose (step or mod), replay alone, then non-regression passes last
   - unverified: dessicated emu texture not played
   - passes P1-P5 played 2026-09-29, 0 failed, see docs/runs/history.md; the only error line in each Player.log is the empty Pickle test mod
   - feature: send the description to Steam (thanks line added 2026-09-29): item 3806762626 exists, so by hand or CI `update_description`, never from About.xml
   - feature: PR to upstream dninemfive/rw-moa (needs Virginie agreement)
 session:      maj:        2026-09-12, releve automatique
-updated:      2026-10-12, writeTests[1.0.0]
-protocols_read_sha: a12ca46f140973594383f15f9dea4fdf83b64764
+updated:      2026-10-12, playTests[1.0.0]
+protocols_read_sha: f494145ed1bd67f0d72e1d7591e961109c20946c
 ---
 
 # Moa Renew — status
@@ -399,3 +398,9 @@ Old `done` (legacy vocabulary, `playTests` by the table) -> retained **writeTest
 - 5 auditSettings: `not_applicable`, no C#, no settings page, nothing to configure. OK.
 - 6 localize: `Check-DefInjected` 11 keys, 0 errors; `FRENCH_REVIEW.md` generated; Virginie's read pending.
 - 7 writeTests: offline tests rerun green today. `Tests/Pickle/Check-Steps.ps1` could not run (Pickle `CucumberExpressions.dll` not found under the default Workshop path): **unverified** today, last green 2026-09-29. 7.g blocked by the French read.
+
+### French review and transition, 2026-10-12
+
+- Virginie read `FRENCH_REVIEW.md` (generated at b00eaaa, clean clone): no correction, no gender switch needed. `un petit moa` and `il vit` agree with the species and the egg; `fécondé` and `non fécondé` agree with `œuf`. `translation_fr: complete`. Her three documentary points applied: review revision committed, `nothing else changed since` removed from CHANGELOG 0.1.0, `dessicated` -> `desiccated` in the prose (the XML tag `dessicatedBodyGraphicData` is vanilla spelling, kept). Her English wording suggestion (`It has long been domesticated`) goes to the upstream PR in BACKLOG.md, no PR of its own.
+- `Tests/Pickle/Check-Steps.ps1` rerun with Pickle-local 1.6 assemblies: every step line resolves to one step, every local pattern compiles.
+- `writeTests -> playTests` established at 525b9bf (offline tests and step table green on this revision). Replaces the retained `writeTests[1.0.0]` above. Next: replay P6 (feature 10) alone by ticket, then the rest of `playTests` (8.a-8.m).
