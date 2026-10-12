@@ -388,3 +388,14 @@ Old `done` (legacy vocabulary, `playTests` by the table) -> retained **writeTest
 - Not blocking `writeTests`, carried to `playTests`: P6 red (hatching, feature 10) not replayed; `code_review_sha` not set (8.m); S5 existing colony; emu dessicated texture.
 - Art: uncommitted work in the tree (Art/Gallery, echo.png, Preview.config.json, README, regenerated Preview and ModIcon) is not mine; left untouched, not committed here.
 - No game launch, no ticket filed.
+
+### Audit 2026-10-12, transitions 1 to 7 replayed one by one (revision 518219e + these edits)
+
+- 1 setupRepo: own `.git`, origin `vbardales/Rimworld-Moa-Renew`, README/ATTRIBUTION/LICENSE/CHANGELOG present, `upstream_mod_remotes` set. OK.
+- 2 makeSources: `Art/ModIcon-source.png` present (owner). `Mod/About/ModIcon.png` was older than its source (2026-10-03 vs 10-04) and 16 KB: regenerated today with ffmpeg Lanczos, 128 x 128, 23.9 KB (2.b). Not done: `Art/ModIcon.ico` (ignored by git, is from 2026-10-03). `Preview-source.png`: 1 colour family, Vmean 0.346, but it shows three bird faces and a lantern glow, vignette and soft shading; whether that counts as painted rendering and "at most one face" (2.e) is Virginie's call (Preview accepted 2026-09-13, not reopened for taste): **unverified**.
+- 2.f Art: the tree holds the new `Art/` layout (Gallery/, Preview.config.json, deleted old scripts) uncommitted since 2026-10-03; `Art/echo.png` listed by the first status of this session is gone from disk. Not mine, not committed; `Mod/About/Preview.png` of 10-03 still carries the older ModIcon. Preview and gallery belong to `mountPreview`.
+- 3 code: no C#, no build. `CHANGELOG.md` opened with `## [1.0.0] - unreleased`; now `## [Unreleased]` above `## [0.1.0]` (3.c, 13.c).
+- 4 declareDependencies, rechecked 2026-10-12 at 518219e: `modDependencies` none; `loadAfter` Core and the five DLC (ordering only), `loadBefore` ADS 2; patches `AnimalProsthetics2` and `BetterCrossbreeding` guarded, `EmuCrossbreeding` edits the vanilla emu by owner decision 2026-09-29; XND and Dogs Mate: no patch, reasons above. `Check-DefRefs` clean, `Check-XmlFields` 7 files clean.
+- 5 auditSettings: `not_applicable`, no C#, no settings page, nothing to configure. OK.
+- 6 localize: `Check-DefInjected` 11 keys, 0 errors; `FRENCH_REVIEW.md` generated; Virginie's read pending.
+- 7 writeTests: offline tests rerun green today. `Tests/Pickle/Check-Steps.ps1` could not run (Pickle `CucumberExpressions.dll` not found under the default Workshop path): **unverified** today, last green 2026-09-29. 7.g blocked by the French read.
