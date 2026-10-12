@@ -52,7 +52,7 @@ Optional mods are not staged together: the maps are separate so a red is attribu
 - Language switching and the game's reaction to a missing mod: the game's business, not tested.
 - **S5, existing colony:** covered by `03` and `10`: `test-colony` is a save written without this mod, loaded with it active, which is what adding the mod to an existing colony is. A colony that already holds a moa is the save-and-reload scenario of `03`.
 - **Forced, not waited:** the mating delay and the 7 days of incubation are the game's timers; `10` forces the hatcher's progress to its end and asserts what is born, not the duration.
-- **Not played:** the dessicated emu texture (cosmetic, no assertion possible without a pixel check).
+- **Not played:** the desiccated emu texture (cosmetic, no assertion possible without a pixel check).
 
 ## Evidence: what to keep
 

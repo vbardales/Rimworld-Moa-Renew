@@ -76,8 +76,8 @@ No stat, no biome weight, no life stage, no tool, no texture.
 
 ## Known limitation, inherited and left alone
 
-The moa's **dessicated corpse borrows the emu's texture**, at each of its three draw sizes. That
-was the authors' choice and it is still the only dessicated art the mod has.
+The moa's **desiccated corpse borrows the emu's texture**, at each of its three draw sizes. That
+was the authors' choice and it is still the only desiccated art the mod has.
 
 ## Verification
 

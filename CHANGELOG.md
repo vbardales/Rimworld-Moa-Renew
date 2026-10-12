@@ -39,10 +39,10 @@ textures by Serpyderpy.
 ### Notes
 
 No balance value was changed. One defect inherited from the original is left in place on purpose
-and documented in `ATTRIBUTION.md`: the dessicated moa corpse uses the emu's texture.
+and documented in `ATTRIBUTION.md`: the desiccated moa corpse uses the emu's texture.
 
 ## [0.1.0] — 2026-09-23
 
 Creation of the `PublishedFileId.txt`: private pre-publication whose only purpose is to create the
-Workshop item (3806762626). It contains `Mod/` as it stood at the commit sent, nothing else changed
-since. It is not a tested release and the item stays private.
+Workshop item (3806762626). It contains `Mod/` as it stood at the commit sent.
+It is not a tested release and the item stays private.
