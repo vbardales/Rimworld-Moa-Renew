@@ -5,10 +5,10 @@ translation_fr: partial
 mod:          Moa Renew
 packageId:    nelim.moa
 repo:         Rimworld-Moa-Renew
+remote:       https://github.com/vbardales/Rimworld-Moa-Renew.git
 visibility:   public
 detached:     yes
-stage:        done
-workflow_stage: done
+workflow_stage: writeTests[1.0.0]
 licence:      open
 licence_at:   upstream LICENSE, MIT, copyright dninemfive 2021
 upstream_mod_remotes:
@@ -26,7 +26,8 @@ remaining:
   - feature: send the description to Steam (thanks line added 2026-09-29): item 3806762626 exists, so by hand or CI `update_description`, never from About.xml
   - feature: PR to upstream dninemfive/rw-moa (needs Virginie agreement)
 session:      maj:        2026-09-12, releve automatique
-updated:      2026-10-02, done
+updated:      2026-10-12, writeTests[1.0.0]
+protocols_read_sha: a12ca46f140973594383f15f9dea4fdf83b64764
 ---
 
 # Moa Renew — status
@@ -377,3 +378,13 @@ Old `done`, retained **done** (`workflow_stage: done`). Session title `moa / don
 - Evidence: none in git; `Tests/Pickle/Evidence/` ignored. P6 minified (report.html and PNGs removed, 33 MB to 9 MB). P6 was missing from `docs/runs/history.md`: added.
 - `tested` blocked: P6 has two red scenarios, not replayed green (feature 10, hatching).
 - Not blocking: Preview line-art protocol (`Art/echo.png`, PUBLISHING.md 2026-10-02) targets new Previews. French review by Virginie still open.
+
+## Audit 2026-10-12 (AUDIT.md of 2026-10-11, tree 4cbc5dc plus uncommitted Art work of another session)
+
+Old `done` (legacy vocabulary, `playTests` by the table) -> retained **writeTests[1.0.0]**. Replaces the "Audit 2026-10-02" stage above (kept as history).
+- 6.f: `FRENCH_REVIEW.md` was missing; generated today by `scripts/Make-FrenchReview.ps1` (revision 573bbbe + uncommitted). `localize` criteria now hold.
+- 7.g blocks `writeTests -> playTests`: `translation_fr` stays `partial` until Virginie has read `FRENCH_REVIEW.md` (two masculine-by-species sentences flagged in the Translation audit 2026-09-30). A session never marks its own French as read.
+- Offline rerun today: `test_content.py` PASS (9 XML, 11 EN/FR fields), `test_patches.py` 10 OK. Scenarios S1-S6 written, Pickle suite declared in `TESTING.md`, local scripts listed in `scripts/LOCAL_SCRIPTS.md`.
+- Not blocking `writeTests`, carried to `playTests`: P6 red (hatching, feature 10) not replayed; `code_review_sha` not set (8.m); S5 existing colony; emu dessicated texture.
+- Art: uncommitted work in the tree (Art/Gallery, echo.png, Preview.config.json, README, regenerated Preview and ModIcon) is not mine; left untouched, not committed here.
+- No game launch, no ticket filed.
