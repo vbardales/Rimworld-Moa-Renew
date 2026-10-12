@@ -4,7 +4,7 @@ desktop.ini
 output/
 evidence/
 Tests/Pickle/Evidence/
-.build/
+build/
 .vs/
 .idea/
 *.user
