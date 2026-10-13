@@ -19,14 +19,14 @@ settings_audit: not_applicable
 tested_on:
 workshop:      3806762626 (private, prepublished 0.1.0 on 2026-09-23)
 remaining:
-  - defect: feature 10 played 2026-09-30 (P6), two scenarios red: fertilized egg hatches 0 young (moa x moa, moa x emu); unfertilized egg and butchering green; diagnose (step or mod), replay alone, then non-regression passes last
+  - feature: non-regression Pickle pass on the published revision, last step of playTests; feature 10 hatching scenarios green on replay p8 (2026-10-12), the P6/P7 red was the step counting the whole egg stack, fixed in a3e2253
   - unverified: dessicated emu texture not played
   - passes P1-P5 played 2026-09-29, 0 failed, see docs/runs/history.md; the only error line in each Player.log is the empty Pickle test mod
   - feature: send the description to Steam (thanks line added 2026-09-29): item 3806762626 exists, so by hand or CI `update_description`, never from About.xml
   - feature: PR to upstream dninemfive/rw-moa (needs Virginie agreement)
 session:      maj:        2026-09-12, releve automatique
 updated:      2026-10-12, playTests[1.0.0]
-protocols_read_sha: f494145ed1bd67f0d72e1d7591e961109c20946c
+protocols_read_sha: 2f4e0002e2543fcde57999c51ff8b2f0dfc8efdb
 ---
 
 # Moa Renew — status
