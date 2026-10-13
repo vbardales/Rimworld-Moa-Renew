@@ -277,6 +277,23 @@ namespace MoaRenew.PickleSteps
                 "ThingDef '" + defName + "' statBases '" + statName + "' is " + entry.value + ", expected " + expected);
         }
 
+        /// <summary>
+        /// The commonality the game computes for the animal in a biome (BiomeDef.CommonalityOfAnimal, which reads
+        /// the species' race.wildBiomes): what natural spawning uses, TEST_SCENARIOS.md S6.
+        /// </summary>
+        [Then("Moa Renew: the biome {string} gives the animal {string} the commonality {float}")]
+        public void BiomeCommonality(PickleContext ctx, string biomeName, string kindName, float expected)
+        {
+            BiomeDef biome = DefDatabase<BiomeDef>.GetNamedSilentFail(biomeName);
+            ctx.Require(biome != null, "no BiomeDef named '" + biomeName + "' is loaded");
+            PawnKindDef kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(kindName);
+            ctx.Require(kind != null, "no PawnKindDef named '" + kindName + "' is loaded");
+            float actual = biome.CommonalityOfAnimal(kind);
+            ctx.Assert(
+                Math.Abs(actual - expected) < 0.0001f,
+                "biome '" + biomeName + "' gives '" + kindName + "' the commonality " + actual + ", expected " + expected);
+        }
+
         /// <summary>A melee tool of the species carries this label, as the game holds it after translation.</summary>
         [Then("Moa Renew: the ThingDef {string} has a tool labelled {string}")]
         public void HasToolLabelled(PickleContext ctx, string defName, string label)
