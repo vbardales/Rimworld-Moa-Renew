@@ -14,7 +14,7 @@
 # (Animal.BedsNew, GSAnimalBedBigPrestige, the nest; seen on a clear cushion in CreaturesOfKiRenew, GALLERY-PROPS.md).
 #
 # SHOOTING PLAN (place; moment; subject; composition; living thing; what the image says):
-#   1  enclosure-south; 12:01; three moas side by side facing the camera, Nelim behind them; zoom 4; "a flock, big birds".
+#   1  enclosure-south; 12:01; three moas facing the camera, Nelim behind them in cream and forest green (the blue-grey birds stand out against her), hair in a bun, a bright smile (MouthSmile, LidCheerful); zoom 4; "a flock, big birds".
 #   2  enclosure-south; +5 min; a moa at a nest (big bed, tall yellow grass, three fertilized eggs on the bed), facing the
 #      camera; zoom 2.4 so the eggs read as eggs; "it lays big eggs".
 #   3  enclosure-south; +10 min; a chick and an adult side by side facing the camera; zoom 2.8; "they hatch, small and round".
@@ -44,12 +44,16 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Sanctuary: the animals are removed from the sanctuary "enclosure-south"
     And Nelim's Sanctuary: I am at the sanctuary "enclosure-south"
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (22, 110, 120)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (92, 38, 84)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (238, 228, 205)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (46, 94, 66)
     And I wait 60 ticks
     And Nelim's Pickle Tools: "Nelim" stands at (148, 211) facing South
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Bun"
+    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (62, 40, 30)
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
+    And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
     When Nelim's Pickle Tools: an adult animal of kind "Moa" named "Kiwi" is spawned at (145, 214)
     And Nelim's Pickle Tools: an adult animal of kind "Moa" named "Pip" is spawned at (148, 214)
     And Nelim's Pickle Tools: an adult animal of kind "Moa" named "Dune" is spawned at (151, 214)
@@ -59,7 +63,7 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: I frame the cell (148, 213) at zoom 4
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And I take a screenshot "image 1, three moas facing the camera"
-    Then Nelim's Pickle Tools: "Nelim" mouth reads "MouthSmirkSmile"
+    Then Nelim's Pickle Tools: "Nelim" mouth reads "MouthSmile"
     And no errors were logged
 
   @review
@@ -116,12 +120,15 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Sanctuary: the animals are removed from the sanctuary "enclosure-south"
     And Nelim's Sanctuary: I am at the sanctuary "enclosure-south"
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (22, 110, 120)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (92, 38, 84)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (238, 228, 205)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (46, 94, 66)
     And I wait 685 ticks
     And Nelim's Pickle Tools: "Nelim" stands at (148, 211) facing South
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Bun"
+    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (62, 40, 30)
+    And Nelim's Pickle Tools: "Nelim" brows are "BrowRaised"
     When Nelim's Pickle Tools: an adult animal of kind "Moa" named "Pip" is spawned at (146, 214)
     And Nelim's Pickle Tools: an adult animal of kind "Emu" named "Neighbour" is spawned at (150, 214)
     And Nelim's Pickle Tools: the animal "Pip" stands at (146, 214) facing East
