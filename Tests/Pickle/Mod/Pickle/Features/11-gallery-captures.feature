@@ -7,8 +7,20 @@
 # frame. Names are neutral (the sex of a spawned animal is not chosen). Midday, the
 # series running 5 game minutes per image (about 208 ticks, cumulative).
 #
-# THE STORY, "a day with the flock", told in the order of the scenarios: (1) Nelim comes to the pen and the three moas turn to her; # (2) one of them has made a nest, a big animal bed with straw and three fertilized eggs, and sits at it; (3) the eggs have hatched, # a chick stands beside its mother; (4) the neighbour emu strolls up and the two big birds stand face to face while Nelim watches # (the cross is why the two breed); (5) the moa's information card closes the series. Mod brought in for the story: More animal beds # (Animal.BedsNew, GSAnimalBedBigPrestige, the nest, seen on a clear cushion in CreaturesOfKiRenew, GALLERY-PROPS.md). # # SHOOTING PLAN (place; moment; subject; composition; living thing; what the image says): #   1  enclosure-south; 12:01; three moas side by side facing the camera, Nelim behind them; zoom 4; "a flock, big birds". #   2  enclosure-south; +5 min; a moa at a nest (big bed, tall yellow grass, three fertilized eggs on the bed), facing the camera; #      zoom 2.4 so the eggs read as eggs; "it lays big eggs". #   3  enclosure-south; +10 min; a chick and an adult side by side facing the camera; zoom 2.8; "they hatch, small and round". #   4  enclosure-south; +15 min; a moa and an emu face to face in profile, Nelim behind them facing the camera; zoom 3.6; "they cross #      with the emu". #   5  the information card of the moa on `window-backdrop-for-height`, midday, cropped around the window afterwards.
-#      around the window afterwards (GALLERY.md).
+# THE STORY, "a day with the flock", in the order of the scenarios: (1) Nelim comes to the pen and three moas turn to her; (2) one
+# of them has made a nest, a big animal bed with straw and three fertilized eggs, and sits at it; (3) the eggs have hatched, a chick
+# stands beside its mother; (4) the neighbour emu strolls up and the two big birds stand face to face while Nelim watches (the
+# cross is why the two breed); (5) the moa's information card closes the series. Mod brought in for the story: More animal beds
+# (Animal.BedsNew, GSAnimalBedBigPrestige, the nest; seen on a clear cushion in CreaturesOfKiRenew, GALLERY-PROPS.md).
+#
+# SHOOTING PLAN (place; moment; subject; composition; living thing; what the image says):
+#   1  enclosure-south; 12:01; three moas side by side facing the camera, Nelim behind them; zoom 4; "a flock, big birds".
+#   2  enclosure-south; +5 min; a moa at a nest (big bed, tall yellow grass, three fertilized eggs on the bed), facing the
+#      camera; zoom 2.4 so the eggs read as eggs; "it lays big eggs".
+#   3  enclosure-south; +10 min; a chick and an adult side by side facing the camera; zoom 2.8; "they hatch, small and round".
+#   4  enclosure-south; +15 min; a moa and an emu face to face in profile, Nelim behind them facing the camera; zoom 3.6;
+#      "they cross with the emu".
+#   5  the information card of the moa on `window-backdrop-for-height`, midday, cropped around the window afterwards.
 #
 # Review scenario: asserts each capture was taken, not what is on it. Each capture has to be OPENED AND LOOKED AT (AUDIT.md 9.d).
 #
