@@ -8,3 +8,4 @@
 2026-10-12 P8 p8-hatching-replay (sans-facultatifs, steps of a3e2253) 18:57: 2 passed, 0 failed, exitReason passed; "a fertilized egg hatches into a moa" and "a moa and an emu give a young of either kind" green. Kept: summary, junit, messages, Player.log.
 2026-10-14 P10 p10-gallery (gallery map, 11-gallery-captures, 8d558f6): exit 3, game stalled at start (no report); retried as p12. P9 (map without InspectTabs) ran 5 scenarios skipped, unmet @requires.
 2026-10-14 P11 p11-biomes (12-natural-spawning, S6, 8d558f6): 1 passed, 0 failed, exitReason passed; commonalities 0.2 / 0.2 / 0.25 / 0.35 in the four declared biomes. Kept: summary, junit, messages, Player.log.
+2026-10-15 P12 p12-gallery (11-gallery-captures, 8d558f6): 5 passed, 0 failed, exitReason passed; five captures opened and read. Kept: summary, junit, messages, Player.log (report and PNGs removed, candidates recompressed into Art/Gallery).

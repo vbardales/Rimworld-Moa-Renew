@@ -28,7 +28,7 @@ remaining:
   - feature: PR to upstream dninemfive/rw-moa (needs Virginie agreement)
 session:      maj:        2026-09-12, releve automatique
 updated:      2026-10-13, shootGallery[1.0.0]
-protocols_read_sha: b9e70d5f65c63f769ac01131f6873b6055e4face
+protocols_read_sha: 23f263539905e7d5a57ecaf3f85c29c92dc4b10d
 ---
 
 # Moa Renew — status
@@ -406,3 +406,11 @@ Old `done` (legacy vocabulary, `playTests` by the table) -> retained **writeTest
 - Virginie read `FRENCH_REVIEW.md` (generated at b00eaaa, clean clone): no correction, no gender switch needed. `un petit moa` and `il vit` agree with the species and the egg; `fécondé` and `non fécondé` agree with `œuf`. `translation_fr: complete`. Her three documentary points applied: review revision committed, `nothing else changed since` removed from CHANGELOG 0.1.0, `dessicated` -> `desiccated` in the prose (the XML tag `dessicatedBodyGraphicData` is vanilla spelling, kept). Her English wording suggestion (`It has long been domesticated`) goes to the upstream PR in BACKLOG.md, no PR of its own.
 - `Tests/Pickle/Check-Steps.ps1` rerun with Pickle-local 1.6 assemblies: every step line resolves to one step, every local pattern compiles.
 - `writeTests -> playTests` established at 525b9bf (offline tests and step table green on this revision). Replaces the retained `writeTests[1.0.0]` above. Next: replay P6 (feature 10) alone by ticket, then the rest of `playTests` (8.a-8.m).
+
+## Audit 2026-10-15 (AUDIT.md of 2026-10-15, tree 2c5e6d4)
+
+Retained **shootGallery[1.0.0]**. Transitions 1-8 hold: French read by Virginie (2026-10-12), P8 hatching green, P11 biomes green, `code_review_sha` 8515501 set after the last Mod/ change, tested_on 2026-10-12. Protocols changed since b9e70d5f (marker rule, echo in two steps, ModIcon weight is a guard, gallery protagonist and front-facing animals) read and applied; `Mark-ProtocolsRead` rerun.
+- 9.a P12 (5 scenarios green) opened and looked at. Director's verdict: keep 2, drop 3. Dropped: image 1 (flock too small and scattered in the frame, birds seen as thin shapes from above), 2 (nest with eggs unreadable, the eggs are two dark dots) and 3 (chick and adult both from behind, no front view). Kept as candidates, recompressed: `Art/Gallery/1-candidate-moa-and-emu.png` (moa and emu face to face, Nelim in frame) and `2-candidate-card.png` (the moa's information card, stats and description).
+- Gap: with 2 images the story (flock, laying, chick) is not told and no moa is seen from the front; the dropped scenes need a tighter camera, a front angle and Nelim in frame (GALLERY.md 2026-10-14 rules). Reshoot of images 1-3 is a new ticket, to decide.
+- 9.b/9.c: indexes contiguous (0-, 1-, 2-); order moa and emu first (most demonstrative). 9.d done for all five. Owner acceptance of the candidates pending.
+- Art tree still holds uncommitted layout work (Preview.png re-render, deleted legacy scripts): `mountPreview` scope, not committed here.
