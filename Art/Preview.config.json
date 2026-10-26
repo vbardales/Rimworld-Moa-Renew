@@ -1,0 +1,30 @@
+{
+  "panel": {
+    "title": "Moa Renew",
+    "titleSize": 46,
+    "titleParts": [{ "text": "Moa" }],
+    "suffix": "Renew",
+    "tagInline": true,
+    "copyLines": [
+      "Flightless birds from Reach.",
+      "Raise a flock for meat and eggs."
+    ]
+  },
+  "backgroundFile": "Preview-source.png",
+  "echo": {
+    "file": "echo-preview.png",
+    "color": "var(--accent)",
+    "width": 180,
+    "height": 165
+  },
+  "icon": {
+    "file": "ModIcon-source.png"
+  },
+  "palette": {
+    "veil": "#303B48",
+    "inkPrimary": "#F2ECE1",
+    "inkSecondary": "#ADD1E7",
+    "accent": "#F075B3",
+    "badgeInk": "#17120E"
+  }
+}
