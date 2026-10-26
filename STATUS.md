@@ -29,7 +29,7 @@ remaining:
   - feature: PR to upstream dninemfive/rw-moa (needs Virginie agreement)
 session:      maj:        2026-09-12, releve automatique
 updated:      2026-10-15, shootGallery[1.0.0]
-protocols_read_sha: 6eeb289af92096fa3a7ee40825e3b5221030873d
+protocols_read_sha: 43dd90d4b7873c500347fba1be01275a48d5795b
 ---
 
 # Moa Renew — status
