@@ -415,3 +415,7 @@ Retained **shootGallery[1.0.0]**. Transitions 1-8 hold: French read by Virginie 
 - Gap: with 2 images the story (flock, laying, chick) is not told and no moa is seen from the front; the dropped scenes need a tighter camera, a front angle and Nelim in frame (GALLERY.md 2026-10-14 rules). Reshoot of images 1-3 is a new ticket, to decide.
 - 9.b/9.c: indexes contiguous (0-, 1-, 2-); order moa and emu first (most demonstrative). 9.d done for all five. Owner acceptance of the candidates pending.
 - Art tree still holds uncommitted layout work (Preview.png re-render, deleted legacy scripts): `mountPreview` scope, not committed here.
+
+## Preview validated, 2026-10-27
+
+Virginie validated Mod/About/Preview.png (config Art/Preview.config.json, ModIcon badge bottom-left) at a2c3a8b. Not reopened for taste. Echo review (echo_review_sha) still due at mountPreview/prepareRelease.
