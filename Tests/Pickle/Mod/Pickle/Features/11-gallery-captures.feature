@@ -20,6 +20,8 @@
 # HOW A GESTURE IS OBTAINED: the game is paused; a pawn or an animal is forced into a job (Ingest on a Hay heap, a walk, a lie-down),
 # then `I advance the paused game by exactly N ticks` lets the job begin and stops it mid-movement. N is a first guess (about
 # 13 ticks per cell for a walking pawn) and is tuned by the capture, never by the run being green.
+# FACING: z grows to the north and the camera looks from the south, so a bird shows its front when it heads to a heap at a SMALLER z
+# than itself (images 1, 2, 4: birds at z 215 to 218, heaps at z 212 to 213); a heap at the same z shows it in profile (image 5).
 #
 # SHOOTING PLAN (place; moment; subject; composition; living things; decor; the instant; what the image says):
 #   1  WIDE opening. enclosure-south; 12:01; Nelim, a flock; zoom 8.5 on (150, 213), the whole pen with the south gate (159, 207) and
@@ -77,8 +79,8 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: I place the decor "Hay" at (153, 212)
     And Nelim's Pickle Tools: a female adult animal of kind "Moa" named "Kiwi" is spawned at (146, 216)
     And Nelim's Pickle Tools: a female adult animal of kind "Moa" named "Pip" is spawned at (149, 217)
-    And Nelim's Pickle Tools: a male adult animal of kind "Moa" named "Dune" is spawned at (147, 211)
-    And Nelim's Pickle Tools: a male adult animal of kind "Moa" named "Moss" is spawned at (150, 209)
+    And Nelim's Pickle Tools: a male adult animal of kind "Moa" named "Dune" is spawned at (151, 215)
+    And Nelim's Pickle Tools: a male adult animal of kind "Moa" named "Moss" is spawned at (155, 216)
     And Nelim's Pickle Tools: the animal "Kiwi" stands at (146, 216) facing South
     And Nelim's Pickle Tools: the animal "Pip" stands at (149, 217) facing South
     And Nelim's Pickle Tools: "Nelim" stands at (158, 208) facing West
@@ -111,23 +113,23 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (238, 228, 205)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (46, 94, 66)
     And I wait 268 ticks
-    When Nelim's Pickle Tools: I place the decor "Hay" at (147, 215)
-    And Nelim's Pickle Tools: I place the decor "Hay" at (148, 215)
-    And Nelim's Pickle Tools: I place the decor "Hay" at (149, 215)
+    When Nelim's Pickle Tools: I place the decor "Hay" at (147, 213)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (148, 213)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (149, 213)
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (143, 217) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (153, 217) fully grown
-    And Nelim's Pickle Tools: a female adult animal of kind "Moa" named "Kiwi" is spawned at (147, 213)
-    And Nelim's Pickle Tools: a female adult animal of kind "Moa" named "Pip" is spawned at (148, 213)
-    And Nelim's Pickle Tools: a male adult animal of kind "Moa" named "Dune" is spawned at (149, 213)
+    And Nelim's Pickle Tools: a female adult animal of kind "Moa" named "Kiwi" is spawned at (147, 215)
+    And Nelim's Pickle Tools: a female adult animal of kind "Moa" named "Pip" is spawned at (148, 215)
+    And Nelim's Pickle Tools: a male adult animal of kind "Moa" named "Dune" is spawned at (149, 215)
     And Nelim's Pickle Tools: "Nelim" stands at (151, 212) facing East
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
-    And Nelim's Pickle Tools: the animal "Kiwi" is forced into the job "Ingest" on the item "Hay" at (147, 215)
-    And Nelim's Pickle Tools: the animal "Pip" is forced into the job "Ingest" on the item "Hay" at (148, 215)
-    And Nelim's Pickle Tools: the animal "Dune" is forced into the job "Ingest" on the item "Hay" at (149, 215)
+    And Nelim's Pickle Tools: the animal "Kiwi" is forced into the job "Ingest" on the item "Hay" at (147, 213)
+    And Nelim's Pickle Tools: the animal "Pip" is forced into the job "Ingest" on the item "Hay" at (148, 213)
+    And Nelim's Pickle Tools: the animal "Dune" is forced into the job "Ingest" on the item "Hay" at (149, 213)
     And Nelim's Pickle Tools: "Nelim" is forced to walk to (154, 213)
     And Nelim's Pickle Tools: I advance the paused game by exactly 20 ticks
     And Nelim's Pickle Tools: I frame the cell (148, 214) at zoom 4
@@ -177,14 +179,14 @@ Feature: the Workshop gallery images
     And Nelim's Sanctuary: the animals are removed from the sanctuary "enclosure-south"
     And Nelim's Sanctuary: I am at the sanctuary "enclosure-south"
     And I wait 685 ticks
-    When Nelim's Pickle Tools: I place the decor "Hay" at (147, 215)
-    And Nelim's Pickle Tools: I place the decor "Hay" at (149, 215)
+    When Nelim's Pickle Tools: I place the decor "Hay" at (147, 213)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (149, 213)
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (145, 217) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (152, 217) fully grown
-    And Nelim's Pickle Tools: a female adult animal of kind "Moa" named "Pip" is spawned at (147, 213)
-    And Nelim's Pickle Tools: an animal of kind "Moa" named "Chick" is spawned at (152, 211) at life stage 0
-    And Nelim's Pickle Tools: the animal "Pip" is forced into the job "Ingest" on the item "Hay" at (147, 215)
-    And Nelim's Pickle Tools: the animal "Chick" is forced into the job "Ingest" on the item "Hay" at (149, 215)
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (153, 216) fully grown
+    And Nelim's Pickle Tools: a female adult animal of kind "Moa" named "Pip" is spawned at (147, 215)
+    And Nelim's Pickle Tools: an animal of kind "Moa" named "Chick" is spawned at (152, 218) at life stage 0
+    And Nelim's Pickle Tools: the animal "Pip" is forced into the job "Ingest" on the item "Hay" at (147, 213)
+    And Nelim's Pickle Tools: the animal "Chick" is forced into the job "Ingest" on the item "Hay" at (149, 213)
     And Nelim's Pickle Tools: I advance the paused game by exactly 30 ticks
     And Nelim's Pickle Tools: I frame the cell (148, 214) at zoom 3.5
     And Nelim's Pickle Tools: studio presentation mode is enabled
