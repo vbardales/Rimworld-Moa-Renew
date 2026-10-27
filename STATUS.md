@@ -419,3 +419,17 @@ Retained **shootGallery[1.0.0]**. Transitions 1-8 hold: French read by Virginie 
 ## Preview validated, 2026-10-27
 
 Virginie validated Mod/About/Preview.png (config Art/Preview.config.json, ModIcon badge bottom-left) at a2c3a8b. Not reopened for taste. Echo review (echo_review_sha) still due at mountPreview/prepareRelease.
+
+## Shotlist 2026-10-27 (replaces the plan of 2026-10-15, rated 2.5/5 on paper)
+
+One story, "a day with the flock" (Nelim, `enclosure-south`, noon, clear, +5 game minutes per image, 12:01 to 12:21), in the header of `Tests/Pickle/Mod/Pickle/Features/11-gallery-captures.feature`. Director's pass by an Opus sub-agent, kept: no Hay on the ground in 1, Nelim and the animals caught mid-stride, the timeline of 3/4 fixed (no hatch shown), the emu walks in, Nelim leaves in 5. Not kept: a BrowRaised override in 5 (back to camera, the expression is not visible). Nelim: `Roo_HD_Hair_Highpony` (APPARENCES-CANON, never a bun), cream shirt and forest-green trousers all day, MouthSmile.
+
+| shot | a time | b decor | c living | d pawn | e action and instant | f composition | g says | j thumbnail | estimate | main risk |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 wide | 12:01 clear | Hay heap, 2 tall-grass tufts | 4 moas, 2 facing South | Nelim, outfit, ponytail, smile | carries 20 Hay, forced walk, 2 moas Ingest, 40 ticks; "just after the first armful" | zoom 8.5, whole pen, gate foreground | a flock fed by hand | weak (wide, no 268 px check) | 4.5 | Ingest on Hay refused (not hungry or not eaten by the moa) |
+| 2 medium | +5 min | 3 Hay heaps, 2 tufts | 3 moas facing the camera | Nelim walking off, same outfit | Ingest x3, Nelim forced walk, 20 ticks; "first beak goes down" | zoom 4, heaps foreground, Nelim off-centre | they gather and eat | ok (3 birds fill a third of the height) | 5 | tick count tuned by the capture |
+| 3 close | +10 min | big nest bed, 3 fertilized eggs, 4 tufts, Hay | hen brooding facing South, cock | none | hen lies, cock Ingest 25 ticks; "just before the cock reaches the hay" | zoom 2.4, cock at the frame edge | they lay big eggs and brood them | ok (eggs fill 40 percent) | 5 | brooding pose after the bed is placed |
+| 4 medium-close | +15 min | 2 Hay heaps, 2 tufts | hen and chick (stage 0) | none | both Ingest, chick from 3 cells, 30 ticks; "just before the chick reaches the heap" | zoom 3.5 | the chicks follow the flock | ok | 5 | chick Ingest on Hay |
+| 5 closing | +20 min | Hay heap, 2 tufts | hen moa, cock emu face to face in profile | Nelim leaving, back to us | Ingest both, Nelim forced walk, 45 ticks; "just as the emu reaches the heap" | zoom 6, Nelim small in the background | the emu neighbour is welcome, and they cross | weak (birds small at 268 px) | 4.5 | emu Ingest, two animals on one heap |
+
+Window shot 6 (info card, Stats tab) is not rated. Series k: ok (one story with who, where, day and rhythm; wide 8.5, medium 4 and 6, close 2.4 and 3.5; opening 1 sets the pen, closing 5 Nelim leaves). Mean on paper 4.8. Steps: all exist in the NPT catalogue (ColonistRace and ScreenshotStudio); `Check-Steps.ps1` cannot resolve the shared tools here (`PickleTools/Tests/Source` missing), so the text of the step lines is checked by reading only. No step asked to NPT.
