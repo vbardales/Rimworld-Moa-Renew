@@ -208,6 +208,7 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (46, 94, 66)
     And I wait 893 ticks
     When Nelim's Pickle Tools: I place the decor "Hay" at (148, 214)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (147, 214)
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (145, 217) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (153, 217) fully grown
     And Nelim's Pickle Tools: a female adult animal of kind "Moa" named "Pip" is spawned at (149, 214)
@@ -219,7 +220,7 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
     And Nelim's Pickle Tools: the animal "Pip" is forced into the job "Ingest" on the item "Hay" at (148, 214)
-    And Nelim's Pickle Tools: the animal "Neighbour" is forced into the job "Ingest" on the item "Hay" at (148, 214)
+    And Nelim's Pickle Tools: the animal "Neighbour" is forced into the job "Ingest" on the item "Hay" at (147, 214)
     And Nelim's Pickle Tools: "Nelim" is forced to walk to (159, 205)
     And Nelim's Pickle Tools: I advance the paused game by exactly 45 ticks
     And Nelim's Pickle Tools: I frame the cell (150, 212) at zoom 6
