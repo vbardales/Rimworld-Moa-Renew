@@ -5,5 +5,5 @@ Companion mod `nelim.moa.pickletests` (development only, never published): `Mod/
 Every local step starts with "Moa Renew:" to stay unique in Pickle's single step namespace. The moa is a ThingDef and a PawnKindDef
 of one name, so Pickle's own def steps cannot be used; the local ones name the def type. Scope, passes and what is not played: `../../TESTING.md`.
 
-Check before filing a request: `powershell.exe -ExecutionPolicy Bypass -File Tests/Pickle/Check-Steps.ps1`.
+Check before filing a request: `powershell.exe -NoProfile -ExecutionPolicy Bypass -File ..\scripts\Check-Steps.ps1 -ModRoot .` (shared script, protocols root).
 File requests only with `Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1`, never a direct launch; see `../../TESTING.md` for the five passes.

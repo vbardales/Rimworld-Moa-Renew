@@ -21,5 +21,5 @@ If a correction is needed, rerun its affected static checks and game scenarios; 
 `tested` until all applicable scenarios and log/UI checks have passed.
 
 Compilation and custom C# unit tests are not applicable: the mod contains XML and textures only.
-Static coverage and content regression tests are in Tests/test_content.py; game field/reference
+Static coverage and content regression tests are in Tests/Test-Moa.ps1 and the shared Check-ModBasics and Check-Translations; game field/reference
 and injection validation use the shared scripts documented in Tests/RESULTS.md.

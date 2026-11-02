@@ -6,10 +6,10 @@ Offline first, then the game. Passes P1-P5 played 2026-09-29 (green); P6 (featur
 
 | Check | Command | Covers |
 |---|---|---|
-| Content | `uv run --with lxml python Tests/test_content.py` | XML parses, EN/FR coverage of the 11 owned fields, egg/hatcher links, Wildness, textures, licence copies |
-| Patches | `uv run --with lxml python Tests/test_patches.py` | the three patch files applied to real Core 1.6 and ADS 2 XML, with and without the target mods |
+| Basics, French | `scripts/Check-ModBasics.ps1 -ModRoot .`, `scripts/Check-Translations.ps1 -ModRoot .` | XML parses, duplicate defNames, About, licence copies; EN/FR coverage of the 11 owned fields, tokens |
+| Moa values and patches | `powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Test-Moa.ps1` | egg/hatcher links, Wildness, textures, About text, SHA256 manifest; the three patch files applied (shared `scripts/lib/PatchEngine.ps1`) to real Core 1.6 and ADS 2 XML, with and without the target mods |
 | Refs, fields, injection | `scripts/Check-DefRefs.ps1`, `Check-XmlFields.ps1`, `Check-DefInjected.ps1` | see `Tests/*-results.txt` |
-| Step table | `Tests/Pickle/Check-Steps.ps1` | every feature line resolves to exactly one step; every local pattern compiles |
+| Step table | `scripts/Check-Steps.ps1 -ModRoot .` | every feature line resolves to exactly one step; every local pattern compiles |
 
 ## What needs the game, and why it is Gherkin
 
