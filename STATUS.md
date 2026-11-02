@@ -20,7 +20,7 @@ tested_on:     2026-10-12
 code_review_sha: 851550110a606bf003e03116694c0ec6dd85a03c
 workshop:      3806762626 (private, prepublished 0.1.0 on 2026-09-23)
 remaining:
-  - feature: gallery (9.a): reshoot of the 5 images queued, tickets p17 (20261027-011106-491-4456 images 1-3, 20261027-011107-983-ba4f images 4-6, f574b7b; shotlist of 2026-10-27, estimate 4.6; p15 cancelled); P12 candidates 1-candidate-moa-and-emu and 2-candidate-card judged not ready by the session (top-down birds, card named Cock showing Female, uncropped); after the run: open every image, crop the card, recompress under 2 MB, ask Virginie only for the serious ones
+  - feature: gallery (9.a): reshoot of the 5 images queued, tickets p17 (20261027-011106-491-4456 images 1-3, 20261027-011107-983-ba4f images 4-6, f574b7b; shotlist of 2026-10-27, estimate 4.6; p15 cancelled); p17 images 1-3 red 2026-11-02 (images 1 and 2: hairstyle Roo_HD_Hair_Highpony absent from the test game; image 3: cell (148, 215) already holds GSAnimalBedBigPrestige; images 4-6 ticket still queued), to ask NPT, relaunch images 1-3 alone; P12 candidates 1-candidate-moa-and-emu and 2-candidate-card judged not ready by the session (top-down birds, card named Cock showing Female, uncropped); after the run: open every image, crop the card, recompress under 2 MB, ask Virginie only for the serious ones
   - feature: non-regression Pickle pass after publication (followUp, owner rule 2026-10-13); feature 10 hatching scenarios green on replay p8 (2026-10-12), the P6/P7 red was the step counting the whole egg stack, fixed in a3e2253
   - not_applicable: dessicated emu texture: inherited emu texture, limitation documented in S4; no texture of our own to test (Audit ruling 2026-10-13)
   - S5 existing colony: played by 03-spawn-and-reload (P1) and 10-eggs-hatching-butchery (P8), both on `test-colony`, a save written before this mod (header modIds: Core, four DLC, Odyssey, Harmony, Pickle, no nelim.moa), loaded with the mod active, spawn and reload, "no errors were logged" (Audit ruling 2026-10-13)
@@ -28,7 +28,7 @@ remaining:
   - feature: send the description to Steam (thanks line added 2026-09-29): item 3806762626 exists, so by hand or CI `update_description`, never from About.xml
   - feature: PR to upstream dninemfive/rw-moa (needs Virginie agreement)
 session:      maj:        2026-09-12, releve automatique
-updated:      2026-10-15, shootGallery[1.0.0]
+updated:      2026-11-02, shootGallery[1.0.0]
 protocols_read_sha: 6579ee3b29ca236e0709dc890255b9d1595e20da
 ---
 
