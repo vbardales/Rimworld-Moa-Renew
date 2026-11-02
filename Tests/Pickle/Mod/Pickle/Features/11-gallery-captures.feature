@@ -148,6 +148,7 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Sanctuary: the animals are removed from the sanctuary "enclosure-south"
     And Nelim's Sanctuary: I am at the sanctuary "enclosure-south"
+    And Nelim's Pickle Tools: the area from (147, 213) to (150, 216) is emptied
     And I wait 477 ticks
     When Nelim's Pickle Tools: I place the decor "GSAnimalBedBigPrestige" at (148, 214)
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (147, 213) fully grown
