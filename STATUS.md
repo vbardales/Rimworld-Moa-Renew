@@ -461,3 +461,19 @@ Steps read: 2026-11-10
 | included animal (rule 5) | shots |
 |---|---|
 | Moa (adult, chick stage 0, both eggs) | 1, 2, 3, 4, 5 |
+
+## Shotlist 2026-11-10
+
+Replaces the plan of 2026-10-27 for images 1, 2, 4 (recomposed) and 5 (tightened, emu pending the owner's validation, fallback Shogun); 3 and 6 keep their plan (3 gains a lit TorchLamp; PiT's StageDecor now accepts the eggs on the bed). Director's pass: Opus sub-agent. Kept: front views by `stands facing South` with only one bird forced into Ingest per shot (the forced Ingest on a south heap gave back views in p18), staggered birds, tighter zoom (a smaller zoom number frames tighter in this tool; the sub-agent read it the other way round), a lit lamp in every frame, a full heap, the chick inside the frame one cell from its heap. Not kept: a request to NPT for a rotation step (`the animal X faces South` already exists), a cheek-mark report (it may be the `Face_Love` tattoo, to look at on the capture).
+
+Story (header of `Tests/Pickle/Mod/Pickle/Features/11-gallery-captures.feature`): a day with the flock, noon at `enclosure-south`, Nelim in cream shirt and forest-green trousers all day, +5 game minutes per image.
+
+| shot | a | b | c | d | e | f | g | j | plan | main risk |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 wide-medium | 12:01 clear | lit TorchLamp, Hay heap, 3 grass tufts, 3 Daylily | 4 moas, 2 facing South | Nelim, outfit, Highpony, MouthSmile | carries 20 Hay, forced walk 25 ticks, 2 moas Ingest | zoom 3 on (155, 211), gate and lamp in frame | the flock gathers around Nelim and her hay | birds about 160 px, tight cluster | 5 | Nelim mid-stride timing |
+| 2 medium | +5 min | lit Brazier, 3 heaps, 3 tufts, Daylily | 3 moas staggered, 2 facing South | Nelim walking off, face to us, smile | Pip Ingest on a full heap, Nelim walks south 15 ticks | zoom 3 on (149, 213) | they gather and eat | 3 birds a third of the height | 5 | Nelim's cheek mark |
+| 3 close | +10 min | nest bed, 3 eggs, 4 tufts, Hay, lit TorchLamp | hen lies facing South, cock | none | cock Ingest 25 ticks | zoom 2.4 on (149, 214) | they lay big eggs and brood them | eggs 40 percent | 5 | eggs hatch-tick on the bed (PiT caveat) |
+| 4 close | +15 min | 2 heaps, 2 tufts, Daylily, lit TorchLamp, fence edge | hen and chick stage 0 | none | both Ingest, chick one cell from its heap, 8 ticks | zoom 2.2 on (148, 214) | the chicks follow the flock | chick in frame | 5 | chick still not visible |
+| 5 medium | +20 min | 2 heaps, 2 tufts, lit TorchLamp, Daylily | hen moa, cock emu (pending) | Nelim leaving, back to us | both Ingest, Nelim walks 45 ticks | zoom 4 on (150, 212) | a neighbour comes to the same hay as the moa | two birds, profile | 5 | emu validation, two animals one heap |
+
+k series: ok (one story, wide 3, medium 3 and 4, close 2.4 and 2.2, opening 1, closing 5). Mean on paper 5. Read: the feature header, the p18 captures 1 and 2 (opened), `GALLERY.md` criteria, `steps.md` (fuelled step, `faces` step). Not verified: defNames `TorchLamp`, `Brazier`, `Plant_Daylily` against the game defs (listed in `GALLERY-PROPS.md`), the chick spawn, the moa facing.
