@@ -435,3 +435,29 @@ One story, "a day with the flock" (Nelim, `enclosure-south`, noon, clear, +5 gam
 Window shot 6 (info card, Stats tab) is not rated. Series k: ok (one story with who, where, day and rhythm; wide 8.5, medium 4 and 6, close 2.4 and 3.5; opening 1 sets the pen, closing 5 Nelim leaves). Mean on paper 4.6 after the rate-gallery check (heaps moved south of the birds in 1, 2 and 4; weak f was 2 and 4, weak j is 1 and 5). Steps: all exist in the NPT catalogue (ColonistRace and ScreenshotStudio); `Check-Steps.ps1` cannot resolve the shared tools here (`PickleTools/Tests/Source` missing), so the text of the step lines is checked by reading only. No step asked to NPT.
 
 Correction 2026-10-27: tickets a8b5 and 5d14 cancelled before starting; coordinates of images 1, 2 and 4 fixed so the birds face the camera (rate-gallery found the heaps north of the birds). Refiled below.
+
+## NSB
+
+Synced 2026-11-10 (first sync of this mod). NSB changed since 2026-11-02 only on other mods' needs (Quill, VALIDE, fixture z3, batches 5l/5m); nothing touches the places, Nelim or the animals this gallery uses. NPT changed since: new steps (ScreenshotStudio field family, stockpile, sky overlays, graphic scale, cardinal-cell decor); none replaces a hand-made setup here, none lets an item stand on a building (asked from PiT for image 3, 2026-11-10). Shotlist unchanged.
+
+Places read: 2026-11-10
+Tribe read: 2026-11-10
+Steps read: 2026-11-10
+
+| place | shots | changes for the gallery | last read |
+|---|---|---|---|
+| `enclosure-south` (149, 214) | 1-5 | decor per shot, removed after; NSB status "à embellir", logo of Nelim flowers (zones 3 to 15) validated 2026-11-08 only on the decor fixture `Nelims-tribe-decor-mods-z3`; the scenarios still load the old `Nelims-tribe` | 2026-11-10 |
+| `window-backdrop-for-height` (90, 140) | 6 | none; free zone | 2026-11-10 |
+
+| colonist | shots | outfit | last read | exceptions |
+|---|---|---|---|---|
+| Nelim (in the save) | 1, 2, 5 | cream shirt, forest-green trousers all day (free, rule 4); `Roo_HD_Hair_Highpony` (NSB canon), MouthSmile override of the canonical smirk (scenario choice, not a property change) | 2026-11-10 (profile, canon, VALIDE, AVANCEMENT) | none |
+
+| animal | shots | outfit | last read | exceptions |
+|---|---|---|---|---|
+| Moa (added by the mod) | 1-5 | none | mod defs | authorized by default (2026-11-07) |
+| Emu (vanilla, patched by the mod for crossbreeding) | 5 | none | not in `CATALOGUE-ANIMAUX.md` | outside NSB, not added by the mod: validation PENDING |
+
+| included animal (rule 5) | shots |
+|---|---|
+| Moa (adult, chick stage 0, both eggs) | 1, 2, 3, 4, 5 |
