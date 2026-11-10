@@ -456,7 +456,7 @@ Steps read: 2026-11-10
 | animal | shots | outfit | last read | exceptions |
 |---|---|---|---|---|
 | Moa (added by the mod) | 1-5 | none | mod defs | authorized by default (2026-11-07) |
-| Emu (vanilla, patched by the mod for crossbreeding) | 5 | none | not in `CATALOGUE-ANIMAUX.md` | outside NSB, not added by the mod: validation PENDING |
+| Emu (vanilla, patched by the mod for crossbreeding) | 5 | none | not in `CATALOGUE-ANIMAUX.md` | outside NSB: validated by the owner 2026-11-10 ("valide") for this mod, shot 5 |
 
 | included animal (rule 5) | shots |
 |---|---|

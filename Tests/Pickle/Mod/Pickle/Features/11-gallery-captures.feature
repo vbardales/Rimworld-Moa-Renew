@@ -46,7 +46,7 @@
 #        into Ingest, 8 ticks, in front of its mother so she does not cover it; no nest, no egg; decor: tall grass (146, 216), (150, 216),
 #        Plant_Daylily (145, 213), a lit TorchLamp at (151, 215), the fence edge; instant: "just before the chick reaches the heap beside its mother"; says "the chicks
 #        follow the flock".
-#   5. MEDIUM closing (kept as is until the owner answers on the emu). enclosure-south; +20 min; zoom 4 on (150, 212): a hen moa and a
+#   5. MEDIUM closing (emu validated by the owner on 2026-11-10: "valide"). enclosure-south; +20 min; zoom 4 on (150, 212): a hen moa and a
 #        cock emu meet at a Hay heap, face to face in profile; Nelim in the background leaving through the south gate, empty-handed, back
 #        mostly to us, mid-step, the same outfit; a lit TorchLamp at (160, 208) and Plant_Daylily (156, 208) at the gate; instant: "just as the emu reaches the moa's heap"; says "the emu neighbour comes to the same hay as the moa";
 #        (hen moa x cock emu breed: Better Crossbreeding). Fallback without the emu: zoom 4 on x 153, z 210, Shogun walking west from x 154, z 212
